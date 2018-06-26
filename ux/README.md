@@ -2,49 +2,85 @@
 
 ## **Proceso de UX**
 
-Nuestro primer acercamiento lo haremos a través del proceso de diseño, donde pasamos por diferentes etapas como:
-
 ### **1. Descubrimiento e investigación**
-(En esta fase es donde vamos a tener ese proceso de investigación y acercamiento con el usuario, es donde vamos a obtener el conocimiento para poder saber a quién vamos a llegar, pero de manera más profunda. Es tener la empatía y el acercamiento necesario para conocerlo.
 
-También vamos a tener en cuenta al negocio, sus objetivos y a los stakeholders(involucrados)).
+__Usuarixs:__ Las personas que usarán el producto serán lxs Training Manager y Coaches de Laboratoria. 
 
-__Usuarixs:__  (Toda la información que sepas de ellxs, ya sea porque las has podido observar o porque obtuviste datos directamente de ellas)
+Training Manager - De ella depende el desarrollo y la retención del activo más valioso de la empresa: su talento. Planifica y ejecuta el programa de formación, coordinando a los coaches para que realicen de manera eficaz su labor, garantizando así  la mejor experiencia de aprendizaje en las alumnas a través de la toma de decisiones en el momento adecuado.
 
-__Necesidades de las usuarias:__
+Coaches - Parte esencial del equipo de formación, brindan apoyo a las estudiantes durante el bootcamp asegurándose que desarrollen sus habilidades técnicas y socioemocionales para insertarlas en el mundo tech e iniciar su carrera en Front end y UX.    
+
+__Necesidades de las usuarias:__  Analizar datos de todas las sedes de Laboratoria respecto al progreso de las estudiantes de una manera simple, permitiéndoles llegar rápidamente a la información más importante por sede o generación, así como número de alumnas activas de la generación actual; además de tener una opción para filtrar información detallada por cada estudiante que les permita ver su avance dentro del LMS del bootcamp tanto de manera individual como grupal permitiéndoles tomar las decisiones necesarias y ofrecerles la mejor experiencia de aprendizaje.
+
+__Objetivos de las usuarias:__ Tener una interfaz donde lxs usuarioxs puedan ver y usar la data de progreso del LMS permitiéndoles agilizar la toma de decisiones.
+
+__Pain points:__ El proceso de revisión de datos se ve obstaculizado por múltiples interacciones en la interfaz o por tener que acceder a varios documentos para obtener información completa de manera específica, destinando mayor tiempo a las tareas de seguimiento volviéndose poco eficaz. 
+
+__Sentimientos:__ * Frustración al tener que dedicar mayor tiempo en la revisión de distintos documentos para obtener información específica o completa. * Pérdida de tiempo por métodos poco eficientes para completar sus tareas de seguimiento a alumnas
 
 
-__Objetivos de las usuarias:__ (Lo que quieren o esperan lograr)
+__Técnicas usadas en esta fase:__  Entrevista personal llenando un formulario como protocolo. Grabación de voz para posterior transcripción de la información. Lista de preguntas: Ver documento anexo.
+
+__5. Objetivos del negocio:__ De manera externa
+* Ser la principal fuente de talento tech femenino de América Latina para el mundo
+* Encontrar a las mujeres talentosas que se necesitan para cambiar el sector
+* Ofrecer una educación de calidad para que las estudiantes construyan en 6 meses los skills técnicos y   socioemocionales para insertarse en el mundo tech e iniciar su carrera.
+* Formar el talento en empresas para una transformación digital incluyente
+* De manera interna
+* Atraer y mantener al mejor talento,
+* Generar las oportunidades para que las mujeres puedan empezar su carrera en tecnología
+* Tener un ambiente de trabajo agradable para que los Laboratorians se sientan felices trabajando en Laboratoria
 
 
-__Pain points:__ (En sus actividades diarias qué es lo que más les molesta u obstaculiza en el proceso de  realizar sus actividades/objetivos)
 
-__Sentimientos:__(Sentimientos que les surgen dentro del proceso de sus actividades. Identificar cuáles predominan)
+__6. Motivaciones del negocio para el data dashboard:__
 
-__Técnicas usadas en esta fase:__ (Sabemos que en este punto, tal vez, sólo has ocupado encuestas, no te olvides de documentar este proceso de recolección de datos)
+* Mantener un seguimiento del progreso de las estudiantes y según ello tomar las decisiones necesarias para ofrecerles la mejor experiencia de aprendizaje.
+* Facilitar el acceso a la información de manera rápida y con ello hacer más eficiente su trabajo
+* Acceso a la información global y particular generada por cada sede, en especial de las Training Manager y/o el staff de Laboratoria.
+* Saber en todo momento el número de estudiantes activas por sede de la generación en curso 
 
-__5. Objetivos del negocio:__ (Enlistarlo(s))
 
-__6. Motivaciones del negocio para el data dashboard:__(Enlistarlo(s))
 
 ### **2. Síntesis y definición**
-(Dada la fase anterior de investigación, ahora vamos a tomar todos los datos más importantes y transformarlos en información valiosa para comenzar a orientarse a la solución. También vamos a entender lo que la empresa quiere de ese producto y comenzar a entender ambas visiones con el fin de encontrar un punto armónico)
 
 __1. Cuáles crees que son los datos más importantes a tener en cuenta para el Data Dashboard:__
 
-   - Sobre las estudiantes:
+   - Sobre las estudiantes (porcentajes y cifras absolutas):
+    * Número global de estudiantes por sede
+	* Número de estudiantes activas en generación actual
+	* Número de estudiantes por generación (entrantes y egresadas)
+	* Avance en el LMS general y por estudiante
+	* Nivel de completitud por temas y subtemas
+	* Alumnas con menos de 60% de progreso
+	* Alumnas con más del 90% de progreso
+ 
  
 
 __2. Lo que los usuarios esperan obtener:__
-
+	* Una visión más sencilla y fácil del avance de las estudiantes tanto de manera global como individual
+	* Acceder a toda la información desde un solo lugar sin abrir tantos documentos
+	* Identificar a las alumnas con menos de 60% de progreso
+	* Identificar a las alumnas con más del 90% de progreso
+	* Disminuir el tiempo de revisión de la información por alumnas
+	* Obtener rápidamente datos de consulta frecuente como total de alumnas y egresadas por sede, por generación, número de alumnas activas
+	* Tener un perfil personal para acceder a la información 
+	* Identificar a las alumnas relacionándolas con una fotografía
 
 __3. Insights:__
+	* Concentrar toda la información en un solo lugar
+	* Optimizar el tiempo de análisis y seguimiento del avance de las alumnas
+	* Acceder de manera rápida a información precisa
+	* Tener una visión clara del avance de toda la generación de estudiantes
+	* Tener una visión clara del avance individual de cada estudiante
+
 
 __4. Data proporcionada:__ 
 
-     -_Data relacionada a los cursos:_
+     -_Data relacionada a los cursos:_ Ver documento anexo.
 
-__5. Insights del negocio:__
+__5. Insights del negocio:__ Toma de decisión. Tener datos que reflejen resultados del programa de formación para tomar decisiones respecto a su mejora
+
 
 ### **3. Ideación**
 (Acá se comienza a pensar esa solución tomando en cuenta la información recopilada y procesada)
@@ -52,7 +88,7 @@ __5. Insights del negocio:__
 ### **4. Prototipado**
 (Esta es la fase creativa, donde se comienza a construir el Data dashboard con la información obtenida de las fases anteriores. Se reafirma crear la experiencia de usuario, donde la solución resuelve necesidades y facilita la vida)
 
-Sketch: (Adjuntar liga)
+Sketch: ![Página Bienvenida](/images/07.jpg)
 
 Prototipo en figma: (Adjuntar liga)
 
