@@ -88,7 +88,7 @@ __5. Insights del negocio:__ Toma de decisión. Tener datos que reflejen resulta
 ### **4. Prototipado**
 (Esta es la fase creativa, donde se comienza a construir el Data dashboard con la información obtenida de las fases anteriores. Se reafirma crear la experiencia de usuario, donde la solución resuelve necesidades y facilita la vida)
 
-Sketch: ![Página Bienvenida](images/07.jpg)
+Sketch: ![Página Bienvenida](Images/07.jpg)
 
 Prototipo en figma: (Adjuntar liga)
 
