@@ -125,7 +125,6 @@ __4. Data proporcionada:__
      │              ├── quinta
      │              └── tercera
 
-     │   └── laboratoria.json
 
 __5. Insights del negocio:__ Toma de decisión. Tener datos que reflejen resultados del programa de formación para tomar decisiones respecto a su mejora
 
