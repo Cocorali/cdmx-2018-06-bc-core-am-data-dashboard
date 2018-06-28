@@ -133,7 +133,6 @@ __5. Insights del negocio:__ Toma de decisión. Tener datos que reflejen resulta
 ### **3. Ideación**
 (Acá se comienza a pensar esa solución tomando en cuenta la información recopilada y procesada)
 
-
 #### Referencias Gráficas
 
 Google Analytics: ![Google Analytics](images/analytics.jpg)
