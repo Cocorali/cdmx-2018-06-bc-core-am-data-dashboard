@@ -4,7 +4,7 @@
 
 ### **1. Descubrimiento e investigación**
 
-__Usuarixs:__ Las personas que usarán el producto serán lxs Training Manager y Coaches de Laboratoria. 
+__Usuarixs:__ Las personas que usarán el producto serán lxs Training Manager y Coaches de Laboratoria.
 
 Training Manager - De ella depende el desarrollo y la retención del activo más valioso de la empresa: su talento. Planifica y ejecuta el programa de formación, coordinando a los coaches para que realicen de manera eficaz su labor, garantizando así  la mejor experiencia de aprendizaje en las alumnas a través de la toma de decisiones en el momento adecuado.
 
@@ -14,7 +14,7 @@ __Necesidades de las usuarias:__  Analizar datos de todas las sedes de Laborator
 
 __Objetivos de las usuarias:__ Tener una interfaz donde lxs usuarioxs puedan ver y usar la data de progreso del LMS permitiéndoles agilizar la toma de decisiones.
 
-__Pain points:__ El proceso de revisión de datos se ve obstaculizado por múltiples interacciones en la interfaz o por tener que acceder a varios documentos para obtener información completa de manera específica, destinando mayor tiempo a las tareas de seguimiento volviéndose poco eficaz. 
+__Pain points:__ El proceso de revisión de datos se ve obstaculizado por múltiples interacciones en la interfaz o por tener que acceder a varios documentos para obtener información completa de manera específica, destinando mayor tiempo a las tareas de seguimiento volviéndose poco eficaz.
 
 __Sentimientos:__ * Frustración al tener que dedicar mayor tiempo en la revisión de distintos documentos para obtener información específica o completa. * Pérdida de tiempo por métodos poco eficientes para completar sus tareas de seguimiento a alumnas
 
@@ -38,7 +38,7 @@ __6. Motivaciones del negocio para el data dashboard:__
 * Mantener un seguimiento del progreso de las estudiantes y según ello tomar las decisiones necesarias para ofrecerles la mejor experiencia de aprendizaje.
 * Facilitar el acceso a la información de manera rápida y con ello hacer más eficiente su trabajo
 * Acceso a la información global y particular generada por cada sede, en especial de las Training Manager y/o el staff de Laboratoria.
-* Saber en todo momento el número de estudiantes activas por sede de la generación en curso 
+* Saber en todo momento el número de estudiantes activas por sede de la generación en curso
 
 
 
@@ -54,8 +54,8 @@ __1. Cuáles crees que son los datos más importantes a tener en cuenta para el 
 	* Nivel de completitud por temas y subtemas
 	* Alumnas con menos de 60% de progreso
 	* Alumnas con más del 90% de progreso
- 
- 
+
+
 
 __2. Lo que los usuarios esperan obtener:__
 	* Una visión más sencilla y fácil del avance de las estudiantes tanto de manera global como individual
@@ -64,7 +64,7 @@ __2. Lo que los usuarios esperan obtener:__
 	* Identificar a las alumnas con más del 90% de progreso
 	* Disminuir el tiempo de revisión de la información por alumnas
 	* Obtener rápidamente datos de consulta frecuente como total de alumnas y egresadas por sede, por generación, número de alumnas activas
-	* Tener un perfil personal para acceder a la información 
+	* Tener un perfil personal para acceder a la información
 	* Identificar a las alumnas relacionándolas con una fotografía
 
 __3. Insights:__
@@ -75,9 +75,57 @@ __3. Insights:__
 	* Tener una visión clara del avance individual de cada estudiante
 
 
-__4. Data proporcionada:__ 
+__4. Data proporcionada:__
 
      -_Data relacionada a los cursos:_ Ver documento anexo.
+
+     ├── data
+     │   └── sede
+     │        ├── generacion
+     │              ├── cuarta
+     │                   ├── estudiantes
+     │                         ├── 0
+     │                             ├── correo
+     │                             ├── nombre
+     │                             ├── progreso
+     │                                  ├── duracionPrograma
+     │                                  ├── porcentajeCompletado
+     │                                  └── temas
+     │                                       ├── 01-Introduccion-a-programacion
+     │                                             ├── duracionTema
+     │                                             ├── duracionTemaCompletado
+     │                                             ├── porcentajeCompletado
+     │                                             ├── subtemas
+     │                                                  ├── 00-bienvenida-orientacion
+     │                                                       ├── completado
+     │                                                       ├── duracionSubtema
+     │                                                       └── tipo
+     │                                                  ├── 01-desarrollo-profesional
+     │                                                       ├── completado
+     │                                                       ├── duracionSubtema
+     │                                                       └── tipo
+     │                                                  ├── 02-por-que-aprender-a-programar
+     │                                                       ├── completado
+     │                                                       ├── duracionSubtema
+     │                                                       └── tipo
+     │                                                  ├── 03-tu-primer-sitio
+     │                                                       ├── completado
+     │                                                       ├── duracionSubtema
+     │                                                       └── tipo
+     │                                                  └── 04-quiz
+     │                                                       ├── completado
+     │                                                       ├── duracionSubtema
+     │                                                       ├── puntuacion
+     │                                                       └── tipo
+     │                                             ├── subtemasCompletados
+     │                                             └── subtemasTotales
+     │                                       ├── 02-Variables-y-tipo-de-datos
+     │                                       └── 03-UX
+     │                             └── turno
+     │              ├── quinta
+     │              └── tercera
+
+     │   └── laboratoria.json
 
 __5. Insights del negocio:__ Toma de decisión. Tener datos que reflejen resultados del programa de formación para tomar decisiones respecto a su mejora
 
@@ -85,12 +133,22 @@ __5. Insights del negocio:__ Toma de decisión. Tener datos que reflejen resulta
 ### **3. Ideación**
 (Acá se comienza a pensar esa solución tomando en cuenta la información recopilada y procesada)
 
+
+#### Referencias Gráficas
+
+Google Analytics: ![Google Analytics](images/analytics.jpg)
+Smart Beemo: ![Google Analytics](images/smartbeemo.jpg)
+Bamboo HR: ![Google Analytics](images/bamboo.jpg)
+
+
+
 ### **4. Prototipado**
-(Esta es la fase creativa, donde se comienza a construir el Data dashboard con la información obtenida de las fases anteriores. Se reafirma crear la experiencia de usuario, donde la solución resuelve necesidades y facilita la vida)
+(Esta es la fase creativa, donde se comienza a cons
+Sketch: ![Página Bienvenida](images/sketch.jpg)truir el Data dashboard con la información obtenida de las fases anteriores. Se reafirma crear la experiencia de usuario, donde la solución resuelve necesidades y facilita la vida)
 
-Sketch: ![Página Bienvenida](Images/07.jpg)
+Sketch: ![Página Bienvenida](images/sketch.jpg)
 
-Prototipo en figma: (Adjuntar liga)
+Prototipo en figma: https://www.figma.com/proto/tdsS4b7gtPGBIhFlMjCOQH/01-Laboratoria-Login?scaling=scale-down&node-id=47%3A4
 
 ### **5. User testing**
 (Si deseas validar tu propuesta, acércate a tu usuario y que te de feedback con el fin de mejorar tu producto en beneficio del negocio y de tu usuarix).

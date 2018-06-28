@@ -1,22 +1,18 @@
 //Agregando funcionalidad a mi botón
 document.getElementById('jsonBtn').addEventListener('click', cargarJSON);
 
-//const data = JSON.parse("laboratoria")
-
 function cargarJSON() {
-	//Aquí también podría meter una URL, me pregunto si la extensión web server chrome ayudaría
-	fetch('http://127.0.0.1:8887/laboratoria.json')
-	    .then(function(response) {
-		//return response.json();
-		console.log(response);
-	})
-	.then(function(data){
-		console.log(data);
-        /*let html = ' ';
-        //Pedir un arreglo del objeto y mostrarlo en html
-        data.forEach(function(laboratoria) {
-        	html += `${laboratoria.generacion}`;
-        })
-        document.getElementById('resultado').innerHTML = html;*/
-	})
+	//Fetch va a jalar Json desde URL
+	fetch('https://raw.githubusercontent.com/BeryNice/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json')
+	    .then (response => (response.json()))
+		 //console.log(response);
+
+		.then (data => {
+          //document.getElementById('jsonPrint').innerHTML= "jsonBtn".value ;
+		  console.log(data);
+		})
+
+		.catch((error) => {
+			console.log('Error: ', error);
+		});
 }
