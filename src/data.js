@@ -1,53 +1,45 @@
-//Agregando funcionalidad a mi botón
-document.getElementById('jsonBtn').addEventListener('click', cargarJSON);
+// Esta hoja debe contener toda la funcionalidad que corresponda a obtener, procesar y manipular datos.
 
-function cargarJSON() {
-	//Fetch va a jalar Json desde URL
-
-	const url = 'https://raw.githubusercontent.com/BeryNice/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json';
-	fetch(url)
-	    .then (response => (response.json()))
-		 //console.log(response);
-		.then (data => {
-		  for (let countries in data) {
-
-		  }
-          //document.getElementById('jsonPrint').innerHTML= "jsonBtn".value ;
-		  // const laboratoria = data;
-
-		  console.log(data);
+ window.computeGenerationsStats = (laboratoria) => {
+	const generacionesArr = [];
+    const obj = {
+		campus : '',
+		generation: ' ',
+		average : 0,
+		count : 0,
+	}
+	for (key in laboratoria) {
+		obj.campus = key;
+		const generations = Object.keys([laboratoria[key].generacion]);
+		generations.forEach((generation) => {
+			obj.generation = generation;
+			const students = laboratoria[key].generacion[generation].estudiantes;
+			for (student in students) {
+				average += students[student].progreso.porcentajeCompletado;
+				average = average / students.length;
+				obj.average = average;
+				obj.count = students.length;
+			}
+        	generacionesArr.push(obj);
 		})
-
-		.catch((error) => {
-			console.log('Error: ', error);
-		});
-
-    /*		data.forEach(function(laboratoria) {
-			console.log(laboratoria.generacion);
-		  })
+	}
+   
+}
+	
+    /*		
     const prueba = "";
     for (let propiedad in laboratoria) {
 		prueba = prueba + laboratoria[propiedad];
-	}
-
-	console.log(objetoLab);*/
-
-
-
-        /*let html = ' ';
-        //Pedir un arreglo del objeto y mostrarlo en html
-        data.forEach(function(laboratoria) {
-        	html += `${laboratoria.generacion}`;
-        })
-		document.getElementById('resultado').innerHTML = html;*/
-	}
-
+	}*/
 
 	/*
-
     computeStudentsStats(laboratoria)
 	computeGenerationsStats(laboratoria)
 	sortStudents(students, orderBy, orderDirection)    order Direction = ascendente / descendiente
 	filterStudents(students, search)
+    */
 
-	*/
+
+	//aquí sólo pinta 'santiago'   contenido.innerHTML = sedes
+    //aquí abajo sólo pinta undefined tres veces : (
+    //contenido.innerHTML += `${sedes.generacion} `

@@ -141,12 +141,12 @@ Bamboo HR: ![Google Analytics](images/bamboo.jpg)
 
 
 ### **4. Prototipado**
-(Esta es la fase creativa, donde se comienza a construir el Data dashboard con la información obtenida de las fases anteriores. Se reafirma crear la experiencia de usuario, donde la solución resuelve necesidades y facilita la vida)
 
 Sketch: ![Página Bienvenida](images/sketch.jpg)
 
 Prototipo en figma: [prototipo inicial sprint 1] (https://www.figma.com/proto/tdsS4b7gtPGBIhFlMjCOQH/01-Laboratoria-Login?scaling=scale-down&node-id=47%3A4)
 
 ### **5. User testing**
-(Si deseas validar tu propuesta, acércate a tu usuario y que te de feedback con el fin de mejorar tu producto en beneficio del negocio y de tu usuarix).
+
+
 ****
