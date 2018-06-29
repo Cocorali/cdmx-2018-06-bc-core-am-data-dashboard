@@ -8,12 +8,12 @@
 		average : 0,
 		count : 0,
 	}
-	for (key in laboratoria) {
-		obj.campus = key;
-		const generations = Object.keys([laboratoria[key].generacion]);
+	for (item in data) {
+		obj.campus = item;
+		const generations = Object.keys([laboratoria[item].generacion]);
 		generations.forEach((generation) => {
 			obj.generation = generation;
-			const students = laboratoria[key].generacion[generation].estudiantes;
+			const students = data[item].generacion[generation].estudiantes;
 			for (student in students) {
 				average += students[student].progreso.porcentajeCompletado;
 				average = average / students.length;
