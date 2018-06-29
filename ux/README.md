@@ -125,7 +125,6 @@ __4. Data proporcionada:__
      │              ├── quinta
      │              └── tercera
 
-     │   └── laboratoria.json
 
 __5. Insights del negocio:__ Toma de decisión. Tener datos que reflejen resultados del programa de formación para tomar decisiones respecto a su mejora
 
@@ -148,6 +147,3 @@ Sketch: ![Página Bienvenida](images/sketch.jpg)
 Prototipo en figma: [prototipo inicial sprint 1] (https://www.figma.com/proto/tdsS4b7gtPGBIhFlMjCOQH/01-Laboratoria-Login?scaling=scale-down&node-id=47%3A4)
 
 ### **5. User testing**
-
-
-****

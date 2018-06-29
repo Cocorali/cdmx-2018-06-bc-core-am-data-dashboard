@@ -9,7 +9,7 @@ let contenido = document.getElementById("contenido");
 //Declarando variable para que fetch jale JSON desde URL
 const url = 'https://raw.githubusercontent.com/BeryNice/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json';
 
-	function cargarJSON() { 
+	function cargarJSON() {
 	    fetch(url)
 	    .then (response => (response.json())
 		.then (data => {
@@ -22,14 +22,12 @@ const url = 'https://raw.githubusercontent.com/BeryNice/cdmx-2018-06-bc-core-am-
 				   let generacion = generacionSede[propiedades].generacion;
 				   //console.log(generacion);
 				}
-			
+
 			}
-			//document.getElementById("contenido").innerHTML = `${sedes}`; 
-			
-		})			
+			//document.getElementById("contenido").innerHTML = `${sedes}`;
+
+		})
 		.catch((error) => {
 			console.log('Error: ', error);
 		}));
 	}
-
-

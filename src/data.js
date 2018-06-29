@@ -23,10 +23,10 @@
         	generacionesArr.push(obj);
 		})
 	}
-   
+
 }
-	
-    /*		
+
+    /*
     const prueba = "";
     for (let propiedad in laboratoria) {
 		prueba = prueba + laboratoria[propiedad];
