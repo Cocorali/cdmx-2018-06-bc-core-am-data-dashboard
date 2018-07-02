@@ -1,33 +1,42 @@
 //Aquí poner todo el código que tenga que ver con mostrar los datos en la pantalla
 
-// Declarando una variable para función posterior que accione el botón
-
-document.getElementById('jsonBtn').addEventListener('click', cargarJSON);
+document.getElementById('jsonBtn').addEventListener('click', mainData);
 //Variable que voy a usar para pintar data
 let contenido = document.getElementById("contenido");
-//let sedes = "";
-//Declarando variable para que fetch jale JSON desde URL
 const url = 'https://raw.githubusercontent.com/BeryNice/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json';
+ function mainData() {
+        fetch(url)
+        .then (response => (response.json())
+        .then ((data) => {
+                    const laboratoriaSedes = getSedes (data);
+                    const labGeneraciones = getGeneracion (data);
+        })
+        .catch((error) => {
+            console.log('Error: ', error);
+        }));
+    }
+//OBTENIENDO LAS SEDES
+const getSedes = (data) => {
+    for (item in data) {
+     //console.log(item);
+     const p = document.createElement('p');
+     const sedes = item;
+     //console.log(sedes);
+     const containerSedes = document.getElementById('resultados');
+     p.innerHTML = sedes;
+     containerSedes.appendChild(p);
+    }
+};
 
-	function cargarJSON() {
-	    fetch(url)
-	    .then (response => (response.json())
-		.then (data => {
-		   for (item in data) {
-			   let generacionSede = data[item].generacion;
-			     console.log(item);
-                 for ( propiedades in generacionSede) {
-			       console.log(propiedades);
-				   let div = document.createElement('div');
-				   let generacion = generacionSede[propiedades].generacion;
-				   //console.log(generacion);
-				}
+//OBTENIENDO LAS GENERACIONES
+const getGeneracion = (data) => {
+    for (item in data) {
+      const p = document.createElement('p');
+      const generaciones = Object.keys(data[item].generacion);
+      console.log(generaciones);
+      /*const containerGeneraciones = document.getElementById('resultados');
+      p.innerHTML = generaciones;
+      containerGeneraciones.appendChild(p);*/
+    };
 
-			}
-			//document.getElementById("contenido").innerHTML = `${sedes}`;
-
-		})
-		.catch((error) => {
-			console.log('Error: ', error);
-		}));
-	}
+    }
