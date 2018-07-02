@@ -8,9 +8,17 @@ body {
     border-bottom: #CCCCCC 1px solid;
   }
   
+
+
+  .login {
+    background-color: #FFE521;
+
+  }
+
   .logo {
   max-width:300px;
   padding-left: 20px;
+  margin-bottom: 20px;
   }
   
   .user {
