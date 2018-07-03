@@ -138,6 +138,26 @@ Google Analytics: ![Google Analytics](images/analytics.jpg)
 Smart Beemo: ![Google Analytics](images/smartbeemo.jpg)
 Bamboo HR: ![Google Analytics](images/bamboo.jpg)
 
+El proceso de ideación comienza con la búsqueda de referencias gráficas de plataformas con datadashboard, para saber cuáles son los estándares de presentación de los elementos de información.
+
+De este análisis, surge de manera consistente, el uso de una barra lateral izquierda de manera fija en el que se ubican los elementos de menú que pueden desplegar submenús.
+
+
+##Objetivos
+Las metas que pretendemos alcanzar con la implementación de este nuevo diseño son: mejorar la accesibilidad como una herramienta para las training manager que apoye la visualización del avance de las alumnas durante el bootcamp  de  una manera más gráfica y accesible  a través de una imagen moderna y minimalista que permita ver los datos más importantes tanto de manera general como particular.
+
+Descripción
+cómo los elementos del diseño ayudan a la consecución de los objetivos propuestos:
+
+Impresión general: un diseño limpio y sencillo, implementando los colores de Laboratoria que permita una continuidad del estilo de la marca, enfocado principalmente  para las training manager permitiéndoles acceder tanto a la información general de Laboratoria como consulta rápida, como al avance en el LMS de cada estudiante en particular, permitiéndoles ver los puntos de mejora y facilitarles la toma de decisiones
+
+Layout: explica un poco el porqué de la distribución de los elementos de una determinada manera. Si el layout da mucha importancia a las áreas vacías y el espacio en blanco explica por qué es necesario.
+Paleta de colores: puede ser acorde a la identidad corporativa de la marca o no. Justifica la elección de una paleta fría, cálida, monocromática, variada… Comenta si has usado el color como ayuda para separar contenido o enfatizar información.
+
+Tipografía: serif, sans-serif, clásica, contemporánea, legible, corporativa… pero no te pongas muy pesado. Este puede ser el momento de hablar cómo el tamaño de la misma apoya la jerarquía de los contenidos.
+Fotografía/ilustración: El uso de fotografía o ilustración representa una oportunidad única para conectar con nuestra audiencia. Puedes escribir sobre cómo las imágenes que has usado apoyan un determinado concepto, van dirigidas a cierto target o puede que simplemente estén en consonancia con la paleta de colores.
+
+
 
 
 ### **4. Prototipado**
@@ -146,4 +166,5 @@ Sketch: ![Página Bienvenida](images/sketch.jpg)
 
 Prototipo en figma: [prototipo inicial sprint 1] (https://www.figma.com/proto/tdsS4b7gtPGBIhFlMjCOQH/01-Laboratoria-Login?scaling=scale-down&node-id=47%3A4)
 
+(https://www.figma.com/proto/tdsS4b7gtPGBIhFlMjCOQH/01-Laboratoria-Ajustes-Feedback?scaling=scale-down)
 ### **5. User testing**
