@@ -1,5 +1,20 @@
 // Esta hoja debe contener toda la funcionalidad que corresponda a obtener, procesar y manipular datos.
 
+
+const url = 'https://raw.githubusercontent.com/BeryNice/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json';
+window.onload = () => {
+    fetch(url)
+        .then(response => (response.json())
+            .then((data) => {
+              getSedes(data);
+              getGeneracion(data);
+              getStudents(data);
+            })
+            .catch((error) => {
+                console.log('Error: ', error);
+            }));
+}
+
 window.computeGenerationsStats = (data) => {
 // 1 debería retornar un arreglo de generaciones con propiedad average y count
 // 2 generation para la primera generación en data de prueba - ver carpeta data/
