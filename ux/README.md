@@ -19,7 +19,7 @@ __Pain points:__ El proceso de revisión de datos se ve obstaculizado por múlti
 __Sentimientos:__ * Frustración al tener que dedicar mayor tiempo en la revisión de distintos documentos para obtener información específica o completa. * Pérdida de tiempo por métodos poco eficientes para completar sus tareas de seguimiento a alumnas
 
 
-__Técnicas usadas en esta fase:__  Entrevista personal llenando un formulario como protocolo. Grabación de voz para posterior transcripción de la información. Lista de preguntas: Ver documento anexo.
+__Técnicas usadas en esta fase:__  Entrevista personal llenando un formulario como protocolo. Grabación de voz para posterior transcripción de la información. Lista de preguntas: Ver documento anexo. (https://docs.google.com/forms/d/e/1FAIpQLSfZ_m90Og6JcHASow4WbVqtfzTilCeP7QURuS8TBn4BEuxc5w/viewform?c=0&w=1)
 
 __5. Objetivos del negocio:__ De manera externa
 * Ser la principal fuente de talento tech femenino de América Latina para el mundo
@@ -167,4 +167,5 @@ Sketch: ![Página Bienvenida](images/sketch.jpg)
 Prototipo en figma: [prototipo inicial sprint 1] (https://www.figma.com/proto/tdsS4b7gtPGBIhFlMjCOQH/01-Laboratoria-Login?scaling=scale-down&node-id=47%3A4)
 
 (https://www.figma.com/proto/tdsS4b7gtPGBIhFlMjCOQH/01-Laboratoria-Ajustes-Feedback?scaling=scale-down)
+
 ### **5. User testing**
