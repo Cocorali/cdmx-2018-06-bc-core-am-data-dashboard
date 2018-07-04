@@ -6,7 +6,7 @@
 
 __Usuarixs:__ Las personas que usarán el producto serán lxs Training Manager y Coaches de Laboratoria.
 
-Training Manager - De ella depende el desarrollo y la retención del activo más valioso de la empresa: su talento. Planifica y ejecuta el programa de formación, coordinando a los coaches para que realicen de manera eficaz su labor, garantizando así  la mejor experiencia de aprendizaje en las alumnas a través de la toma de decisiones en el momento adecuado.
+Training Manager - De ella depende el desarrollo y la retención del activo más valioso de la empresa: su talento. Planifica y ejecuta el programa de formación, coordinando a los coaches para que realicen de manera eficaz su labor, garantizando así  la mejor experiencia de aprendizaje en las estudiantes a través de la toma de decisiones en el momento adecuado.
 
 Coaches - Parte esencial del equipo de formación, brindan apoyo a las estudiantes durante el bootcamp asegurándose que desarrollen sus habilidades técnicas y socioemocionales para insertarlas en el mundo tech e iniciar su carrera en Front end y UX.    
 
@@ -16,7 +16,7 @@ __Objetivos de las usuarias:__ Tener una interfaz donde lxs usuarioxs puedan ver
 
 __Pain points:__ El proceso de revisión de datos se ve obstaculizado por múltiples interacciones en la interfaz o por tener que acceder a varios documentos para obtener información completa de manera específica, destinando mayor tiempo a las tareas de seguimiento volviéndose poco eficaz.
 
-__Sentimientos:__ * Frustración al tener que dedicar mayor tiempo en la revisión de distintos documentos para obtener información específica o completa. * Pérdida de tiempo por métodos poco eficientes para completar sus tareas de seguimiento a alumnas
+__Sentimientos:__ * Frustración al tener que dedicar mayor tiempo en la revisión de distintos documentos para obtener información específica o completa. * Pérdida de tiempo por métodos poco eficientes para completar sus tareas de seguimiento a estudiantes
 
 
 __Técnicas usadas en esta fase:__  Entrevista personal llenando un formulario como protocolo. Grabación de voz para posterior transcripción de la información. Lista de preguntas: Ver documento anexo.
@@ -52,7 +52,7 @@ __1. Cuáles crees que son los datos más importantes a tener en cuenta para el 
 	* Número de estudiantes por generación (entrantes y egresadas)
 	* Avance en el LMS general y por estudiante
 	* Nivel de completitud por temas y subtemas
-	* Alumnas con menos de 60% de progreso
+	* Estudiantes con menos de 60% de progreso
 	* Alumnas con más del 90% de progreso
 
 
@@ -143,20 +143,33 @@ El proceso de ideación comienza con la búsqueda de referencias gráficas de pl
 De este análisis, surge de manera consistente, el uso de una barra lateral izquierda de manera fija en el que se ubican los elementos de menú que pueden desplegar submenús.
 
 
-##Objetivos
-Las metas que pretendemos alcanzar con la implementación de este nuevo diseño son: mejorar la accesibilidad como una herramienta para las training manager que apoye la visualización del avance de las alumnas durante el bootcamp  de  una manera más gráfica y accesible  a través de una imagen moderna y minimalista que permita ver los datos más importantes tanto de manera general como particular.
+### Objetivos
 
-Descripción
+Las metas que pretendemos alcanzar con la implementación de este nuevo diseño son: mejorar la accesibilidad como una herramienta para las training manager que apoye la visualización del avance de las estudiantes durante el bootcamp  de  una manera más gráfica y accesible  a través de una imagen moderna y minimalista que permita ver los datos más importantes tanto de manera general como particular.
+
+### Descripción
 cómo los elementos del diseño ayudan a la consecución de los objetivos propuestos:
 
-Impresión general: un diseño limpio y sencillo, implementando los colores de Laboratoria que permita una continuidad del estilo de la marca, enfocado principalmente  para las training manager permitiéndoles acceder tanto a la información general de Laboratoria como consulta rápida, como al avance en el LMS de cada estudiante en particular, permitiéndoles ver los puntos de mejora y facilitarles la toma de decisiones
+#### Impresión general
+Un diseño limpio y sencillo, implementando los colores de Laboratoria que permita una continuidad institucional del estilo de la marca.
 
-Layout: explica un poco el porqué de la distribución de los elementos de una determinada manera. Si el layout da mucha importancia a las áreas vacías y el espacio en blanco explica por qué es necesario.
-Paleta de colores: puede ser acorde a la identidad corporativa de la marca o no. Justifica la elección de una paleta fría, cálida, monocromática, variada… Comenta si has usado el color como ayuda para separar contenido o enfatizar información.
 
-Tipografía: serif, sans-serif, clásica, contemporánea, legible, corporativa… pero no te pongas muy pesado. Este puede ser el momento de hablar cómo el tamaño de la misma apoya la jerarquía de los contenidos.
+
+#### Layout:
+
+Enfocado principalmente  para las training manager, el datadashboard será una herramienta que les permita acceder tanto a la información general de Laboratoria como consulta rápida, como al avance en el LMS de cada estudiante en particular, permitiéndoles ver los puntos de mejora y facilitarles la toma de decisiones a través de la implementación de los colores institucionales para enfatizar información importante, haciendo una analogía a los colores del semáforo en el que el rosa fungirá como rojo (alerta) indicando los valores a los que se les deberá poner atención que estén por debajo del 60% de desempeño, verde a los que se encuentren por arriba del 90% y amarillo a los valores intermedios o porcentajes promedio.
+
+![Colores Laboratoria](images/colores-corporativos-laboratoria.png)
+
+![gráficos Laboratoria](images/corchetes-laboratoria.png)
+
+
+
+#### Tipografía:
+serif, sans-serif, clásica, contemporánea, legible, corporativa… pero no te pongas muy pesado. Este puede ser el momento de hablar cómo el tamaño de la misma apoya la jerarquía de los contenidos.
 Fotografía/ilustración: El uso de fotografía o ilustración representa una oportunidad única para conectar con nuestra audiencia. Puedes escribir sobre cómo las imágenes que has usado apoyan un determinado concepto, van dirigidas a cierto target o puede que simplemente estén en consonancia con la paleta de colores.
 
+![Tipografía Laboratoria](images/tipografia-laboratoria.png)
 
 
 
@@ -164,7 +177,12 @@ Fotografía/ilustración: El uso de fotografía o ilustración representa una op
 
 Sketch: ![Página Bienvenida](images/sketch.jpg)
 
-Prototipo en figma: [prototipo inicial sprint 1] (https://www.figma.com/proto/tdsS4b7gtPGBIhFlMjCOQH/01-Laboratoria-Login?scaling=scale-down&node-id=47%3A4)
+Prototipo en figma:
 
-(https://www.figma.com/proto/tdsS4b7gtPGBIhFlMjCOQH/01-Laboratoria-Ajustes-Feedback?scaling=scale-down)
+[prototipo inicial sprint 1] (https://www.figma.com/proto/hn6uw7e19DFnpglsHhbUMr/01-Laboratoria-Preview?scaling=scale-down&node-id=37%3A4)
+
+[prototipo inicial sprint 2]
+(https://www.figma.com/proto/tdsS4b7gtPGBIhFlMjCOQH/01-Laboratoria-Ajustes-Feedback?scaling=scale-down&node-id=47%3A4)
+
+
 ### **5. User testing**
