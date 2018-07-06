@@ -19,9 +19,20 @@
           <p>Usuarix:
             <input type=text name=login> </p>
           <p>Contraseña:
-            <input type=password name=password> </p>
+            <input id="password" type=password name=password> </p>
           <div class="d-flex flex-row-reverse">
-            <input onclick=ingresar() type=button value=Ingresa class="btn btn-light btn-sm p-2">
+              <input onclick=ingresar() id= "trigger" type=button value=Ingresa class="btn btn-light btn-sm p-2">
+
+            <script>
+            var input = document.getElementById("password");
+            input.addEventListener("keyup", function (event){
+              event.preventDefault();
+              if (event.keyCode === 13) {
+                document.getElementById("trigger").click();
+              }
+            })
+          </script>
+
           </div>
         </div>
       </form>
