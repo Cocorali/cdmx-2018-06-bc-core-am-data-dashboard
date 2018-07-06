@@ -1,10 +1,10 @@
 //Aquí poner todo el código que tenga que ver con mostrar los datos en la pantalla
 
 //Variable que voy a usar para pintar data
-const contenido = document.getElementById("contenido");
+const container = document.getElementById('resultados');
+let result = '';
 
 //OBTENIENDO LAS SEDES
-
 getSedes = (data) => {
     document.getElementById('sedesBtn').addEventListener('click', (event) => {
 
@@ -22,11 +22,9 @@ getSedes = (data) => {
 //Gen y sede son variables que ya están declaradas en la función del evento, son etiquetas que contienen
 //el nombre de las propiedades del objeto sobre el que se va a realizar el filtrado, así lo podrá reconocer y comprar
 const filterStudentsStats = (array, gen, sede) =>{
-        //Item es el arreglo de estudiantes, cada unidad del arreglo en formato Objeto de cada Estudiante
-        //console.log(array);
 
         //Declaramos una variable para guardar un nuevo arreglo
-        let arregloPrueba = [];
+        let arrFilteredStudents = [];
         //Accedemos a cada arreglo dentro del arreglo listaEStudiante (9 arreglos en total)
         for (let i=0; i<array.length; i++) {
             //Guardamos cada iteración dentro del arreglo en una variable 
@@ -36,48 +34,47 @@ const filterStudentsStats = (array, gen, sede) =>{
                 //Comparamos que sede y generación sean igual al valor de los dos datasets
                 if (separatedArr[j].sede === event.target.dataset.campus && separatedArr[j].generacion === event.target.dataset.gen){
                     //Si la condición se cumple, crear un nuevo arreglo con solo los valores de esas propiedades
-                  arregloPrueba.push(separatedArr[j]);  
-                
-                }
-               
-            }
-
-            //console.log(array[i]);
+                  arrFilteredStudents.push(separatedArr[j]);                
+                }         
+            }   
         }
-        console.log(arregloPrueba);
 
+        console.log(arrFilteredStudents);
+        for (i=0; i< arrFilteredStudents.length; i++) {
+            result += `<div class="row">
+               <div class="col-1">
+                   <p>Nombre: ${arrFilteredStudents[i].name}</p>
+               </div>
+               <div class="col-4">
+                   <p>Correo: ${arrFilteredStudents[i].correo}</p>
+               </div>
+               <div class="col-3">   
+                   <p>Turno: ${arrFilteredStudents[i].turno}</p>
+               </div>  
+               <div class="col-3">
+                    <p> Porcentaje Completado: ${arrFilteredStudents[i].porcentajeCompletado}</p>
+               </div>
+            </div>`
+		
+        container.innerHTML = result;
+            
+        }
 
-            /*array[i].filter((item) => {
-            });*/
+        return arrFilteredStudents; 
+    };
 
-		array.filter((item) => {
-        //return item.campus === sede;       
-		//&& return item.campus === generacion;
-    })
-    //estudianteSede.filter()
-   // console.log(array, gen)
-   
-};
-
-
-/*drawFilterStudentStats(gen, sede) => {
-    document.getElementById("resultados").innerHTML = array.arrDatosEstudiantes(filterStudentsStats);
-};*/
-
+        
 getGeneracion = (data) => {
-    //console.log(data);
     const eventFunction = (event) => {
-        //console.log(this)
         //Las let declaradas aquí no logran funcionar en nuestro doble for para filtrar...esto pasa por qué es let?
         let gen = event.target.dataset.gen;
         let sede = event.target.dataset.campus;
 				console.log(sede, gen);
 	//Asigna la función getStudents con parámetro data a una variable para usarla en Función de filtrado
         const arrDatosEstudiantes = getStudents(data);
-
-        //Constante que tiene una función anónima, el callback del filter
-        filterStudentsStats(arrDatosEstudiantes, gen, sede)
-
+     //Constante que tiene una función anónima, el callback para filter
+        filterStudentsStats(arrDatosEstudiantes, gen, sede);
+    };
 
         /*for (item in data) {
             const p = document.createElement('p');
@@ -87,15 +84,10 @@ getGeneracion = (data) => {
             containerGeneraciones.appendChild(p);
         };*/
 
-
-    };
-    const btnGeneraciones = document.getElementsByClassName('btnGeneraciones')
-    for(let i= 0; i< btnGeneraciones.length; i++){
-        btnGeneraciones[i].addEventListener('click', eventFunction)
-
+    const btnGeneraciones = document.getElementsByClassName('btnGeneraciones');
+    for(let i= 0; i< btnGeneraciones.length; i++) {
+        btnGeneraciones[i].addEventListener('click', eventFunction);
     }
-
-
 };
 
 window.getStudents = (data) => {
@@ -121,34 +113,60 @@ window.getStudents = (data) => {
         //Aquí obtenemos los porcentajeCompletado de todas las estudiantes de toda la data
                     let porcentajeGeneralDeCompletitud = elementoDelArreglo.progreso.porcentajeCompletado;
                     let correoEstudiante = elementoDelArreglo.correo;
-                    /*
-                                                    for(z=0; z<listaTemas.length;z++){
-                                                        let completedPercentage[primer tema]
-                                                        let completedPercentage[segundo tema]
-                                                        let completedPercentage[tercer tema]
+                    let turnoEstudiante = elementoDelArreglo.turno;
+                    
+                                                    /*for(z=0; z<listaTemas.length;z++){
+                                                        let temasList = listaTemas[z];
+                                                        //console.log(temasList);
 
                                                         let listaSubtemas = Object.keys(elementoDelArreglo.progreso.temas[listaTemas[z]].subtemas)
-                                                        for(m=0;m<listaSubtemas.length;m++){
-                                                            let completedPercentage[PrimerSubtema]
-                                                        }
-                                                    }
-                    */
+                                                        //console.log(listaSubtemas);
 
+                                                        for(m=0; m<listaSubtemas.length;m++){
+                                                            let completedPercentage = listaSubtemas[m];
+                                                            console.log(completedPercentage);
+                                                        }
+                                                    }*/      
                     return {
                         name: elementoDelArreglo.nombre,
                         correo : elementoDelArreglo.correo,
+                        turno : elementoDelArreglo.turno,
                         progreso: elementoDelArreglo.progreso,
-                        sede: sedeActual,
-                        generacion: generacionActual,
                         porcentajeCompletado: porcentajeGeneralDeCompletitud,
+                        sede: sedeActual,
+                        generacion: generacionActual
                     }
                 })
-
                 listaEstudiantes.push(arrNewStudents)
                 //console.log(listaEstudiantes)
-
             }
         }
+        return listaEstudiantes;
+    };
+
+
+
+
+
+       
+//Item es el arreglo de estudiantes, cada unidad del arreglo en formato Objeto de cada Estudiante
+                    /*array[i].filter((item) => {
+            });*/
+
+        /*array.filter((item) => {
+        //return item.campus === sede;       
+		//&& return item.campus === generacion;
+    })*/
+    //estudianteSede.filter()
+   // console.log(array, gen)
+
+
+
+/*drawFilterStudentStats(gen, sede) => {
+    document.getElementById("resultados").innerHTML = array.arrDatosEstudiantes(filterStudentsStats);
+};*/
+
+
 
         /*let prueba = listaEstudiantes.filter((item)=>{
             return item[2] == "lima" && item[3] == "cuarta"
@@ -158,9 +176,5 @@ window.getStudents = (data) => {
              return lista.sede === 'lima';
          })
             //console.log(lima);*/
-            
-
-        return listaEstudiantes;
-        
+                    
         //  })
-};
