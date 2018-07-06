@@ -18,21 +18,45 @@ getSedes = (data) => {
     })
 };
 
-//OBTENIENDO LAS GENERACIONES
-
 //Función para filtrar dentro de arrDatosEstudiantes con parámetros generación y sede
+//Gen y sede son variables que ya están declaradas en la función del evento, son etiquetas que contienen
+//el nombre de las propiedades del objeto sobre el que se va a realizar el filtrado, así lo podrá reconocer y comprar
 const filterStudentsStats = (array, gen, sede) =>{
-		//Item es el arreglo de estudiantes, cada unidad del arreglo en formato Objeto de cada Estudiante
-		array.filter((item) => {
-        //return item.campus === sede;
-        console.log(item);
-				//&& return item.campus === generacio;
+        //Item es el arreglo de estudiantes, cada unidad del arreglo en formato Objeto de cada Estudiante
+        //console.log(array);
 
+        //Declaramos una variable para guardar un nuevo arreglo
+        let arregloPrueba = [];
+        //Accedemos a cada arreglo dentro del arreglo listaEStudiante (9 arreglos en total)
+        for (let i=0; i<array.length; i++) {
+            //Guardamos cada iteración dentro del arreglo en una variable 
+            const separatedArr = array[i];
+            //Accedemos dentro de cada arreglo al objeto estudiantes
+            for (let j= 0; j < separatedArr.length; j++) {
+                //Comparamos que sede y generación sean igual al valor de los dos datasets
+                if (separatedArr[j].sede === event.target.dataset.campus && separatedArr[j].generacion === event.target.dataset.gen){
+                    //Si la condición se cumple, crear un nuevo arreglo con solo los valores de esas propiedades
+                  arregloPrueba.push(separatedArr[j]);  
+                
+                }
+               
+            }
+
+            //console.log(array[i]);
+        }
+        console.log(arregloPrueba);
+
+
+            /*array[i].filter((item) => {
+            });*/
+
+		array.filter((item) => {
+        //return item.campus === sede;       
+		//&& return item.campus === generacion;
     })
     //estudianteSede.filter()
-
-
-// console.log(array, gen)
+   // console.log(array, gen)
+   
 };
 
 
@@ -44,9 +68,10 @@ getGeneracion = (data) => {
     //console.log(data);
     const eventFunction = (event) => {
         //console.log(this)
+        //Las let declaradas aquí no logran funcionar en nuestro doble for para filtrar...esto pasa por qué es let?
         let gen = event.target.dataset.gen;
         let sede = event.target.dataset.campus;
-				//console.log(sede, gen);
+				console.log(sede, gen);
 	//Asigna la función getStudents con parámetro data a una variable para usarla en Función de filtrado
         const arrDatosEstudiantes = getStudents(data);
 
@@ -94,8 +119,8 @@ window.getStudents = (data) => {
         //Aquí convertimos el objeto temas de todas las generaciones en todas las sedes, ubicado dentro del objeto progreso, en un arreglo
                     let listaTemas = Object.keys(elementoDelArreglo.progreso.temas);
         //Aquí obtenemos los porcentajeCompletado de todas las estudiantes de toda la data
-                    let porcentajeGeneralDeCompletitud = elementoDelArreglo.progreso.porcentajeCompletado
-
+                    let porcentajeGeneralDeCompletitud = elementoDelArreglo.progreso.porcentajeCompletado;
+                    let correoEstudiante = elementoDelArreglo.correo;
                     /*
                                                     for(z=0; z<listaTemas.length;z++){
                                                         let completedPercentage[primer tema]
@@ -111,14 +136,16 @@ window.getStudents = (data) => {
 
                     return {
                         name: elementoDelArreglo.nombre,
+                        correo : elementoDelArreglo.correo,
                         progreso: elementoDelArreglo.progreso,
                         sede: sedeActual,
                         generacion: generacionActual,
-                        porcentajeCompletado: porcentajeGeneralDeCompletitud
+                        porcentajeCompletado: porcentajeGeneralDeCompletitud,
                     }
                 })
 
                 listaEstudiantes.push(arrNewStudents)
+                //console.log(listaEstudiantes)
 
             }
         }
@@ -131,8 +158,9 @@ window.getStudents = (data) => {
              return lista.sede === 'lima';
          })
             //console.log(lima);*/
-            //console.log(listaEstudiantes)
+            
 
         return listaEstudiantes;
-  //  })
+        
+        //  })
 };
