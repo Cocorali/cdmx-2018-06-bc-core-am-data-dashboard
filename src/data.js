@@ -8,7 +8,17 @@ window.onload = () => {
             .then((data) => {
               getSedes(data);
               getGeneracion(data);
-              getStudents(data);
+
+              //probando llamar a drawFilterStudentStats con paramnetro gen y campus
+              //drawFilterStudentStats(gen, sede);
+              //probando llamar a filterStudentsStats con paramnetro gen y campus
+              //filterStudentsStats(gen, campus);
+
+              //let arrDatosEstudiantes = getStudents(data);
+              //Aquí armar una función para ir pintando nuestros valores en DOM
+              //let result = '';
+
+
             })
             .catch((error) => {
                 console.log('Error: ', error);
