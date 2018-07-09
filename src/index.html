@@ -1,52 +1,70 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Bienvenida</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
-</head>
-
-<body>
-
-  <header class="p-3 mb-2 bg-warning text-dark, d-flex justify-content-center">
-    <div class="col-sm-3">
-      <img src="images/Laboratoria-Logo-RGB-blanco.png" alt="Laboratoria" class="logo">
-      <form name=form action="pagina-principal.html">
-        <div class="float-left">
-          <p>Usuarix:
-            <input type=text name=login> </p>
-          <p>Contraseña:
-            <input type=password name=password> </p>
-          <div class="d-flex flex-row-reverse">
-            <input onclick=ingresar() type=button value=Ingresa class="btn btn-light btn-sm p-2">
-            <script>
-              var input = document.getElementById("password");
-              input.addEventListener("keyup", function (event){
-                event.preventDefault();
-                if (event.keyCode === 13) {
-                  document.getElementById("trigger").click();
-                }
-              })
-            </script>
-
-          </div>
-        </div>
-      </form>
-  </header>
-
-  <script>
-    const ingresar = () => {
-      if (document.form.password.value == '12345' && document.form.login.value == 'LABORATORIAN') {
-        document.form.submit();
-      } else {
-        alert("Porfavor ingresa, nombre de usuarix y contraseña correctos.");
-      }
-    }
-  </script>
-
-</body>
-
-</html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Bienvenida</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
+      <link rel=“icon” href=“images/favicon.ico”>
+    </head>
+  
+    <body>
+     <main>
+      <div class="p-3 mb-2 bg-warning text-dark, d-flex justify-content-center, row">
+          <img src="images/Laboratoria-Logo-RGB-blanco.png" alt="Laboratoria" class="logo">
+                <article class="card-body text-center">
+                 <form name=form action="pagina-principal.html">
+  
+                 <div class ="form-group" > 
+                <input class="form-control" type=email name=login placeholder="Nombre de usuarix"> 
+                </div>
+                 <div class ="form-group" > 
+                <input class="form-control" id="password" type=password name=password  placeholder="Tu contraseña"> 
+                </div>
+  
+  
+    <div class="row">
+            <div class="col-md-6">
+                <div class="form-group, d-flex flex-row-reverse">
+                    <input onclick=ingresar() id="trigger" type=button value=Ingresa class="btn btn-light btn-sm p-2">
+                </div> 
+            </div>                                     
+        </div>  
+    
+     
+  
+                <script>
+                var input = document.getElementById("password");
+                input.addEventListener("keyup", function (event){
+                  event.preventDefault();
+                  if (event.keyCode === 13) {
+                    document.getElementById("trigger").click();
+                  }
+                })
+              </script>
+          </form>
+        </article>  
+      </div>
+  </main>    
+  
+  
+      <script>
+        const ingresar = () => {
+          if (document.form.password.value == '12345' && document.form.login.value == 'LABORATORIAN') {
+            document.form.submit();
+          } else {
+            alert("Porfavor ingresa, nombre de usuarix y contraseña correctos.");
+          }
+        }
+      </script>
+  
+  
+  <div class="copyrights text-center">
+    <p> Desarrollado por Berenice Lemus y Copelia Altamirano. Laboratoria CDMX 2018 </p>
+  </div>   
+  
+    </body>
+  
+    </html>
+  

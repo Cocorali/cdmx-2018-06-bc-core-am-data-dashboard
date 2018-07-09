@@ -3,27 +3,25 @@
 
 const url = 'https://raw.githubusercontent.com/BeryNice/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json';
 window.onload = () => {
-    fetch(url)
-        .then(response => (response.json())
-            .then((data) => {
-              getSedes(data);
-              getGeneracion(data);
+  fetch(url)
+    .then(response => (response.json())
+      .then((data) => {
+        getSedes(data);
+        getGeneracion(data);
 
-              //probando llamar a drawFilterStudentStats con paramnetro gen y campus
-              //drawFilterStudentStats(gen, sede);
-              //probando llamar a filterStudentsStats con paramnetro gen y campus
-              //filterStudentsStats(gen, campus);
+        // probando llamar a drawFilterStudentStats con paramnetro gen y campus
+        // drawFilterStudentStats(gen, sede);
+        // probando llamar a filterStudentsStats con paramnetro gen y campus
+        // filterStudentsStats(gen, campus);
 
-              //let arrDatosEstudiantes = getStudents(data);
-              //Aquí armar una función para ir pintando nuestros valores en DOM
-              //let result = '';
-
-
-            })
-            .catch((error) => {
-                console.log('Error: ', error);
-            }));
-}
+        // let arrDatosEstudiantes = getStudents(data);
+        // Aquí armar una función para ir pintando nuestros valores en DOM
+        // let result = '';
+      })
+      .catch((error) => {
+        console.log('Error: ', error);
+      }));
+};
 
 window.computeGenerationsStats = (data) => {
 // 1 debería retornar un arreglo de generaciones con propiedad average y count
@@ -71,7 +69,7 @@ const topics = Object.keys(processed[0].stats.topics);
 const subTopics = Object.keys(processed[0].stats.topics[topics[0]].subtopics);
 */
 
-  for (item in data){
+  for (item in data) {
     console.log(Object.keys(data[item]));
   };
 };
