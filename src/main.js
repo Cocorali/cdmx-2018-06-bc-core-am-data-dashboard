@@ -18,33 +18,32 @@ getSedes = (data) => {
   });
 };
 
-//Función para filtrar dentro de arrDatosEstudiantes con parámetros generación y sede
-//Gen y sede son variables que ya están declaradas en la función del evento, son etiquetas que contienen
-//el nombre de las propiedades del objeto sobre el que se va a realizar el filtrado, así lo podrá reconocer y comparar
-const filterStudentsStats = (array, gen, sede) =>{
+// Función para filtrar dentro de arrDatosEstudiantes con parámetros generación y sede
+//    Gen y sede son variables que ya están declaradas en la función del evento, son etiquetas que contienen
+//  el nombre de las propiedades del objeto sobre el que se va a realizar el filtrado, así lo podrá reconocer y comparar
+const filterStudentsStats = (array, gen, sede) => {
+  // Declar amos una variable para guardar un nuevo arreglo
+  let arrFilteredStudents = [];
+  // Accedemos a cada arreglo dentro del arreglo listaEStudiante (9 arreglos en total)
+  for (let i = 0; i = array.length; i++) {
+    // Guardamos cada iteración dentro del arreglo en una variable
+    const separatedArr = array[i];
+    // Accedemos dentro de cada arreglo al objeto estudiantes
+    for (let j = 0; j < separatedArr.length; j++) {
+      // Comparamos  que sede y generación sean igual al valor de los dos datasets
+      if (separatedArr[j].sede === event.target.dataset.campus && separatedArr[j].generacion === event.target.dataset.gen) {
+        // Si la condic ión se cumple, crear un nuevo arreglo con solo los valores de esas propiedades
+        arrFilteredStudents.push(separatedArr[j]);
+      }
+    }
+  }
 
-        //Declaramos una variable para guardar un nuevo arreglo
-        let arrFilteredStudents = [];
-        //Accedemos a cada arreglo dentro del arreglo listaEStudiante (9 arreglos en total)
-        for (let i=0; i<array.length; i++) {
-            //Guardamos cada iteración dentro del arreglo en una variable
-            const separatedArr = array[i];
-            //Accedemos dentro de cada arreglo al objeto estudiantes
-            for (let j= 0; j < separatedArr.length; j++) {
-                //Comparamos que sede y generación sean igual al valor de los dos datasets
-                if (separatedArr[j].sede === event.target.dataset.campus && separatedArr[j].generacion === event.target.dataset.gen){
-                    //Si la condición se cumple, crear un nuevo arreglo con solo los valores de esas propiedades
-                  arrFilteredStudents.push(separatedArr[j]);
-                }
-            }
-        }
-
-        console.log(arrFilteredStudents);
-        for (i=0; i< arrFilteredStudents.length; i++) {
-            //result = "";
-            result += `<div class="row">
+  console.log(arrFilteredStudents);
+  for (i = 0; i < arrFilteredStudents.length; i++) {
+    // result = "";
+    result += `<div class="row">
             <div class="col-1">
-                <p>'#'</p>
+                <p>#</p>
             </div>
             <div class="col-4">
                 <p>${arrFilteredStudents[i].name}</p>
@@ -58,27 +57,26 @@ const filterStudentsStats = (array, gen, sede) =>{
             <div class="col-1">
                  <p>${arrFilteredStudents[i].porcentajeCompletado}</p>
             </div>
-            </div>`
+            </div>`;
 
-        container.innerHTML = result;
+    container.innerHTML = result;
+  };
 
-        }
-
-        return arrFilteredStudents;
-    };
+  return arrFilteredStudents;
+};
 
 
 getGeneracion = (data) => {
-    const eventFunction = (event) => {
-        //Las let declaradas aquí no logran funcionar en nuestro doble for para filtrar...esto pasa por qué es let?
-        let gen = event.target.dataset.gen;
-        let sede = event.target.dataset.campus;
-				console.log(sede, gen);
-	//Asigna la función getStudents con parámetro data a una variable para usarla en Función de filtrado
-        const arrDatosEstudiantes = computeStudentsStats(data);
-     //Constante que tiene una función anónima, el callback para filter
-        filterStudentsStats(arrDatosEstudiantes, gen, sede);
-    };
+  const eventFunction = (event) => {
+  // Las let declaradas aquí no logran funcionar en nuestro doble for para filtrar...esto pasa por qué es let?
+    gen = event.target.dataset.gen;
+    let sede = event.target.dataset.campus;
+    console.log(sede, gen);
+    // Asigna la función getStudents con parámetro data a una variable para usarla en Función de filtrado
+    const arrDatosEstudiantes = computeStudentsStats(data);
+    // constante que tiene una función anónima, el callback para filter
+    filterStudentsStats(arrDatosEstudiantes, gen, sede);
+  };
 
 
   const btnGeneraciones = document.getElementsByClassName('btnGeneraciones');
@@ -89,4 +87,3 @@ getGeneracion = (data) => {
 
 window.getStudents = (data) => {
 };
-

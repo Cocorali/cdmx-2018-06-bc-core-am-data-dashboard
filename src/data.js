@@ -3,13 +3,12 @@
 
 const url = 'https://raw.githubusercontent.com/BeryNice/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json';
 window.onload = () => {
-
-    fetch(url)
-        .then(response => (response.json())
-            .then((data) => {
-              getSedes(data);
-              getGeneracion(data);
-              computeStudentsStats(data);
+  fetch(url)
+    .then(response => (response.json())
+      .then((data) => {
+        getSedes(data);
+        getGeneracion(data);
+        computeStudentsStats(data);
       })
       .catch((error) => {
         console.log('Error: ', error);
@@ -35,29 +34,29 @@ window.computeStudentsStats = (data) => {
 const topics = Object.keys(processed[0].stats.topics);
 const subTopics = Object.keys(processed[0].stats.topics[topics[0]].subtopics);
 */
-let listaEstudiantes = [];
-//Aquí convertimos el objeto sedes en un arreglo
-let sedes = Object.keys(data);
-//Aquí recorremos cada una de las sedes
-for (x = 0; x < sedes.length; x++) {
+  let listaEstudiantes = [];
+  // Aquí convertimos el objeto sedes en un arreglo
+  let sedes = Object.keys(data);
+  // Aquí recorremos cada una de las sedes
+  for (x = 0; x < sedes.length; x++) {
     let sedeActual = sedes[x];
-//Aquí convertimos el objeto generaciones en un arreglo
-    let generaciones = Object.keys(data[sedes[x]].generacion)
-//Aquí recorremos cada una de las generaciones
+    // Aquí convertimos el objeto generaciones en un arreglo
+    let generaciones = Object.keys(data[sedes[x]].generacion);
+    // Aquí recorremos cada una de las generaciones
     for (i = 0; i < generaciones.length; i++) {
-        let generacionActual = generaciones[i];
-//Aquí entramos al arreglo de estudiantes que contiene objetos
-        let students = data[sedes[x]].generacion[generaciones[i]].estudiantes;
-//Aquí recorremos el arreglo de estudiantes con map, recolectando un valor de retorno para cada elemento visitado
-        let arrNewStudents = students.map((elementoDelArreglo) => {
-//Aquí convertimos el objeto temas de todas las generaciones en todas las sedes, ubicado dentro del objeto progreso, en un arreglo
-            let listaTemas = Object.keys(elementoDelArreglo.progreso.temas);
-//Aquí obtenemos los porcentajeCompletado de todas las estudiantes de toda la data
-            let porcentajeGeneralDeCompletitud = elementoDelArreglo.progreso.porcentajeCompletado;
-            let correoEstudiante = elementoDelArreglo.correo;
-            let turnoEstudiante = elementoDelArreglo.turno;
+      let generacionActual = generaciones[i];
+      // Aquí entramos al arreglo de estudiantes que contiene objetos
+      let students = data[sedes[x]].generacion[generaciones[i]].estudiantes;
+      // Aquí recorremos el arreglo de estudiantes con map, recolectando un valor de retorno para cada elemento visitado
+      let arrNewStudents = students.map((elementoDelArreglo) => {
+        // Aquí convertimos el objeto temas de todas las generaciones en todas las sedes, ubicado dentro del objeto progreso, en un arreglo
+        let listaTemas = Object.keys(elementoDelArreglo.progreso.temas);
+        // Aquí obtenemos los porcentajeCompletado de todas las estudiantes de toda la data
+        let porcentajeGeneralDeCompletitud = elementoDelArreglo.progreso.porcentajeCompletado;
+        let correoEstudiante = elementoDelArreglo.correo;
+        let turnoEstudiante = elementoDelArreglo.turno;
 
-                                            /*for(z=0; z<listaTemas.length;z++){
+        /* for(z=0; z<listaTemas.length;z++){
                                                 let temasList = listaTemas[z];
                                                 //console.log(temasList);
 
@@ -69,22 +68,22 @@ for (x = 0; x < sedes.length; x++) {
                                                     console.log(completedPercentage);
                                                 }
                                             }*/
-            return {
-                name: elementoDelArreglo.nombre,
-                correo : elementoDelArreglo.correo,
-                turno : elementoDelArreglo.turno,
-                progreso: elementoDelArreglo.progreso,
-                porcentajeCompletado: porcentajeGeneralDeCompletitud,
-                sede: sedeActual,
-                generacion: generacionActual
-            }
-        })
-        listaEstudiantes.push(arrNewStudents)
-        //console.log(listaEstudiantes)
+        return {
+          name: elementoDelArreglo.nombre,
+          correo: elementoDelArreglo.correo,
+          turno: elementoDelArreglo.turno,
+          progreso: elementoDelArreglo.progreso,
+          porcentajeCompletado: porcentajeGeneralDeCompletitud,
+          sede: sedeActual,
+          generacion: generacionActual
+        };
+      });
+      listaEstudiantes.push(arrNewStudents);
+      // console.log(listaEstudiantes)
     }
-}
-return listaEstudiantes;
-
+  }
+  return listaEstudiantes;
+};
 
 window.sortStudents = (data) => {
 
