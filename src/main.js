@@ -19,20 +19,20 @@ getSedes = (data) => {
 };
 
 // Función para filtrar dentro de arrDatosEstudiantes con parámetros generación y sede
-// Gen y sede son variables que ya están declaradas en la función del evento, son etiquetas que contienen
-// el nombre de las propiedades del objeto sobre el que se va a realizar el filtrado, así lo podrá reconocer y comparar
-const filterStudentsStats = (array, gen, sede) =>{
-  // Declaramos una variable para guardar un nuevo arreglo
+//    Gen y sede son variables que ya están declaradas en la función del evento, son etiquetas que contienen
+//  el nombre de las propiedades del objeto sobre el que se va a realizar el filtrado, así lo podrá reconocer y comparar
+const filterStudentsStats = (array, gen, sede) => {
+  // Declar amos una variable para guardar un nuevo arreglo
   let arrFilteredStudents = [];
   // Accedemos a cada arreglo dentro del arreglo listaEStudiante (9 arreglos en total)
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i = array.length; i++) {
     // Guardamos cada iteración dentro del arreglo en una variable
     const separatedArr = array[i];
     // Accedemos dentro de cada arreglo al objeto estudiantes
     for (let j = 0; j < separatedArr.length; j++) {
-      // Comparamos que sede y generación sean igual al valor de los dos datasets
+      // Comparamos  que sede y generación sean igual al valor de los dos datasets
       if (separatedArr[j].sede === event.target.dataset.campus && separatedArr[j].generacion === event.target.dataset.gen) {
-        // Si la condición se cumple, crear un nuevo arreglo con solo los valores de esas propiedades
+        // Si la condic ión se cumple, crear un nuevo arreglo con solo los valores de esas propiedades
         arrFilteredStudents.push(separatedArr[j]);
       }
     }
@@ -60,8 +60,7 @@ const filterStudentsStats = (array, gen, sede) =>{
             </div>`;
 
     container.innerHTML = result;
-  }
-
+  };
   return arrFilteredStudents;
 };
 
@@ -87,4 +86,3 @@ getGeneracion = (data) => {
 
 window.getStudents = (data) => {
 };
-
