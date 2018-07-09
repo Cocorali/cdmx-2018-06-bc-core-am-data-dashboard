@@ -8,11 +8,9 @@ window.onload = () => {
             .then((data) => {
               getSedes(data);
               getGeneracion(data);
+              computeStudentsStats(data);
 
-              //probando llamar a drawFilterStudentStats con paramnetro gen y campus
-              //drawFilterStudentStats(gen, sede);
-              //probando llamar a filterStudentsStats con paramnetro gen y campus
-              //filterStudentsStats(gen, campus);
+
 
               //let arrDatosEstudiantes = getStudents(data);
               //Aquí armar una función para ir pintando nuestros valores en DOM
@@ -70,10 +68,57 @@ window.computeStudentsStats = (data) => {
 const topics = Object.keys(processed[0].stats.topics);
 const subTopics = Object.keys(processed[0].stats.topics[topics[0]].subtopics);
 */
+let listaEstudiantes = [];
+//Aquí convertimos el objeto sedes en un arreglo
+let sedes = Object.keys(data);
+//Aquí recorremos cada una de las sedes
+for (x = 0; x < sedes.length; x++) {
+    let sedeActual = sedes[x];
+//Aquí convertimos el objeto generaciones en un arreglo
+    let generaciones = Object.keys(data[sedes[x]].generacion)
+//Aquí recorremos cada una de las generaciones
+    for (i = 0; i < generaciones.length; i++) {
+        let generacionActual = generaciones[i];
+//Aquí entramos al arreglo de estudiantes que contiene objetos
+        let students = data[sedes[x]].generacion[generaciones[i]].estudiantes;
+//Aquí recorremos el arreglo de estudiantes con map, recolectando un valor de retorno para cada elemento visitado
+        let arrNewStudents = students.map((elementoDelArreglo) => {
+//Aquí convertimos el objeto temas de todas las generaciones en todas las sedes, ubicado dentro del objeto progreso, en un arreglo
+            let listaTemas = Object.keys(elementoDelArreglo.progreso.temas);
+//Aquí obtenemos los porcentajeCompletado de todas las estudiantes de toda la data
+            let porcentajeGeneralDeCompletitud = elementoDelArreglo.progreso.porcentajeCompletado;
+            let correoEstudiante = elementoDelArreglo.correo;
+            let turnoEstudiante = elementoDelArreglo.turno;
 
-  for (item in data){
-    console.log(Object.keys(data[item]));
-  };
+                                            /*for(z=0; z<listaTemas.length;z++){
+                                                let temasList = listaTemas[z];
+                                                //console.log(temasList);
+
+                                                let listaSubtemas = Object.keys(elementoDelArreglo.progreso.temas[listaTemas[z]].subtemas)
+                                                //console.log(listaSubtemas);
+
+                                                for(m=0; m<listaSubtemas.length;m++){
+                                                    let completedPercentage = listaSubtemas[m];
+                                                    console.log(completedPercentage);
+                                                }
+                                            }*/
+            return {
+                name: elementoDelArreglo.nombre,
+                correo : elementoDelArreglo.correo,
+                turno : elementoDelArreglo.turno,
+                progreso: elementoDelArreglo.progreso,
+                porcentajeCompletado: porcentajeGeneralDeCompletitud,
+                sede: sedeActual,
+                generacion: generacionActual
+            }
+        })
+        listaEstudiantes.push(arrNewStudents)
+        //console.log(listaEstudiantes)
+    }
+}
+return listaEstudiantes;
+
+
 };
 
 window.sortStudents = (data) => {
