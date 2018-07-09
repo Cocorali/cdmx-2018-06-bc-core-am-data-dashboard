@@ -47,9 +47,9 @@ const subTopics = Object.keys(processed[0].stats.topics[topics[0]].subtopics);
       let students = data[sedes[x]].generacion[generaciones[i]].estudiantes;
       // Aquí recorremos el arreglo de estudiantes con map, recolectando un valor de retorno para cada elemento visitado
       let arrNewStudents = students.map((elementoDelArreglo) => {
-        // Aquí convertimos el objeto temas de todas las generaciones en todas las sedes, ubicado dentro del objeto progreso, en un arreglo
+        //  Aquí convertimos el objeto temas de todas las generaciones en todas las sedes, ubicado dentro del objeto progreso, en un arreglo
         let listaTemas = Object.keys(elementoDelArreglo.progreso.temas);
-        // Aquí obtenemos los porcentajeCompletado de todas las estudiantes de toda la data
+        //  Aquí obtenemos los porcentajeCompletado de todas las estudiantes de toda la data
         let porcentajeGeneralDeCompletitud = elementoDelArreglo.progreso.porcentajeCompletado;
         let correoEstudiante = elementoDelArreglo.correo;
         let turnoEstudiante = elementoDelArreglo.turno;
@@ -57,10 +57,8 @@ const subTopics = Object.keys(processed[0].stats.topics[topics[0]].subtopics);
         /* for(z=0; z<listaTemas.length;z++){
                                                 let temasList = listaTemas[z];
                                                 //console.log(temasList);
-
                                                 let listaSubtemas = Object.keys(elementoDelArreglo.progreso.temas[listaTemas[z]].subtemas)
                                                 //console.log(listaSubtemas);
-
                                                 for(m=0; m<listaSubtemas.length;m++){
                                                     let completedPercentage = listaSubtemas[m];
                                                     console.log(completedPercentage);
