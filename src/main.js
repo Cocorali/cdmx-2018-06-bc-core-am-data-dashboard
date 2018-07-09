@@ -61,6 +61,7 @@ getGeneracion = (data) => {
     let gen = event.target.dataset.gen;
     let sede = event.target.dataset.campus;
     console.log(sede, gen);
+
     // Asigna la función getStudents con parámetro data a una variable para usarla en Función de filtrado
     const arrDatosEstudiantes = computeStudentsStats(data);
     // Constante que tiene una función anónima, el callback para filter

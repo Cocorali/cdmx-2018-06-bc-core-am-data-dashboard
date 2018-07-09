@@ -130,7 +130,7 @@ __5. Insights del negocio:__ Toma de decisión. Tener datos que reflejen resulta
 
 
 ### **3. Ideación**
-(Acá se comienza a pensar esa solución tomando en cuenta la información recopilada y procesada)
+A continuación presentamos las referencias que nos permitieron realizar el skecth y aplicarlo en la maquetación.
 
 #### Referencias Gráficas
 
@@ -148,11 +148,10 @@ De este análisis, surge de manera consistente, el uso de una barra lateral izqu
 Las metas que pretendemos alcanzar con la implementación de este nuevo diseño son: mejorar la accesibilidad como una herramienta para las training manager que apoye la visualización del avance de las estudiantes durante el bootcamp  de  una manera más gráfica y accesible  a través de una imagen moderna y minimalista que permita ver los datos más importantes tanto de manera general como particular.
 
 ### Descripción
-cómo los elementos del diseño ayudan a la consecución de los objetivos propuestos:
+Cómo los elementos del diseño ayudan a la consecución de los objetivos propuestos:
 
 #### Impresión general
 Un diseño limpio y sencillo, implementando los colores de Laboratoria que permita una continuidad institucional del estilo de la marca.
-
 
 
 #### Layout:
@@ -166,8 +165,8 @@ Enfocado principalmente  para las training manager, el datadashboard será una h
 
 
 #### Tipografía:
-serif, sans-serif, clásica, contemporánea, legible, corporativa… pero no te pongas muy pesado. Este puede ser el momento de hablar cómo el tamaño de la misma apoya la jerarquía de los contenidos.
-Fotografía/ilustración: El uso de fotografía o ilustración representa una oportunidad única para conectar con nuestra audiencia. Puedes escribir sobre cómo las imágenes que has usado apoyan un determinado concepto, van dirigidas a cierto target o puede que simplemente estén en consonancia con la paleta de colores.
+ El tamaño de la fuente le suma valor a la jerarquía de los contenidos, así que una buena elección de este elemento resultó en un impacto positivo en el producto. Tomando como referencia plataformas del cliente, obtuvimos la tipografía ideal para transmitir un sello contemporáneo y legible.
+
 
 ![Tipografía Laboratoria](images/tipografia-laboratoria.png)
 
@@ -186,3 +185,6 @@ Prototipo en figma:
 
 
 ### **5. User testing**
+Se realizó una prueba de usuario con la training manager de la sede en México.
+El sketch se presentó de forma digital y con botones que le permitían interactuar entre las diferentes ventanas.
+Obtuvimos resultados positivos así como sugerencias para agregar una barra en colores que permita visualizar el porcentaje de estudiantes entre 3 diferentes condiciones de avance dentro del LMS.
