@@ -53,7 +53,6 @@ const subTopics = Object.keys(processed[0].stats.topics[topics[0]].subtopics);
         let porcentajeGeneralDeCompletitud = elementoDelArreglo.progreso.porcentajeCompletado;
         let correoEstudiante = elementoDelArreglo.correo;
         let turnoEstudiante = elementoDelArreglo.turno;
-
         /* for(z=0; z<listaTemas.length;z++){
                                                 let temasList = listaTemas[z];
                                                 //console.log(temasList);

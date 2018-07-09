@@ -67,7 +67,7 @@
           <li>
             <a href="#" class="btnGeneraciones" data-gen="tercera" data-campus="santiago">Generación 3</a>
             <ul>
-              <li>Reporte de Progreso</li>
+              <li><a href="#">Reporte de Progreso</a></li>
             </ul>
           </li>
           <li>
@@ -83,57 +83,47 @@
 
   <!-- Page Content  -->
   <div id="content">
-    <div class="content-header">
-      <div class="user">
-        <img src="images/default-user.png" alt="Logo Laboratoria" class="User">
-        <span> Usuarix </span>
-      </div>
+    <!-- Toogle MEnu  -->
+        <nav class="navbar">
+          <div class="container-fluid">
+            <button type="button" id="sidebarCollapse" class="btn">
+              <i class="fas fa-align-left"></i>
+            </button>
 
-    </div>
+            <div class="user">
+              <img src="images/default-user.png" alt="Logo Laboratoria" class="User">
+              <!--<i class="fas fa-user-circle"></i>-->
+              <a href="index.html"> <span> Usuarix  <i class="fas fa-caret-down"></i> </span></a>
+            </div>
 
-    <div>
-      <h2>REPORTE DE PROGRESO POR ESTUDIANTE</h2>
-      <h3>TERCERA GENERACIÓN / SANTIAGO</h3>
+          </div>
+        </nav>
+
+    <!-- Inicia impresión de contenido  -->
+    <div id="viewResults">
+      <h3>REPORTE DE PROGRESO POR ESTUDIANTE</h3>
+      <h4>TERCERA GENERACIÓN / SANTIAGO</h4>
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-1">
-            <p class="font-weight-bold"> #</p>
-          </div>
-          <div class="col-4">
-            <p class="font-weight-bold">NOMBRE</p>
-          </div>
-          <div class="col-3">
-            <p class="font-weight-bold">EMAIL</p>
-          </div>
-          <div class="col-3">
-            <p class="font-weight-bold">PORCENTAJE COMPLETADO</p>
-          </div>
-          <div class="col-1">
-            <p class="font-weight-bold">TURNO</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-1">
-            <p class="font-weight-bold">1</p>
-          </div>
-          <div class="col-4">
-            <p>Nombre Completo</p>
-          </div>
-          <div class="col-3">
-            <p>correo@yomail.com</p>
-          </div>
-          <div class="col-3">
-            <p>60%</p>
-          </div>
-          <div class="col-1">
-            <p>AM</p>
-          </div>
-        </div>
-        <div id="resultados">
+
+        <div class="table-responsive-sm margin-large-top">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">NOMBRE</th>
+                <th scope="col">EMAIL</th>
+                <th scope="col">TURNO</th>
+                <th scope="col">PORCENTAJE COMPLETADO</th>
+              </tr>
+            </thead>
+
+            <tbody id="resultados">
+
+            </tbody>
+          </table>
         </div>
    </div>
-   </div>
-   
+
 
 
 
