@@ -234,7 +234,8 @@ CONTENT STYLE
   border-bottom: #CCCCCC 1px solid;
 }
 
-#resultados{
+/*#resultados*/
+#viewResults{
   padding: 20px;
 }
 /* ---------------------------------------------------
@@ -354,7 +355,8 @@ MEDIAQUERIES
     padding-right: 0px;
   }
 
-  #resultados{
+  /*#resultados*/
+  #viewResults {
     padding: 15px;
     background-color: #f8f8f8;
   }
@@ -386,7 +388,8 @@ MEDIAQUERIES
     display: none;
   }
 
-  #resultados{
+  /*#resultados*/
+  #viewResults {
     padding: 15px;
     background-color: #f8f8f8;
   }
@@ -421,7 +424,8 @@ MEDIAQUERIES
     display: none;
   }
 
-  #resultados{
+  /*#resultados*/
+  #viewResults {
     padding: 15px;
     background-color: #f8f8f8;
   }
@@ -450,4 +454,3 @@ MEDIAQUERIES
     border-right: #CCCCCC 1px dashed;
   }*/
  }
-

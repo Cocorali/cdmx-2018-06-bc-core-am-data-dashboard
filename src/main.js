@@ -37,27 +37,16 @@ const filterStudentsStats = (array, gen, sede) =>{
       }
     }
   }
-
   //  console.log(arrFilteredStudents);
   for (i = 0; i < arrFilteredStudents.length; i++) {
     // result = "";
-    result += `<div class="row">
-           <div class="col-1">
-               <p>#</p>
-           </div>
-           <div class="col-4">
-               <p>${arrFilteredStudents[i].name}</p>
-           </div>
-           <div class="col-3">
-               <p>${arrFilteredStudents[i].correo}</p>
-           </div>
-           <div class="col-3">
-               <p>${arrFilteredStudents[i].turno}</p>
-           </div>
-           <div class="col-1">
-                <p>${arrFilteredStudents[i].porcentajeCompletado}</p>
-           </div>
-           </div>`;
+    result += ` <tr >
+      <th scope="row"># </th>
+      <td><a href="#">${arrFilteredStudents[i].name}</a> </td>
+      <td>${arrFilteredStudents[i].correo}</td>
+      <td>${arrFilteredStudents[i].turno}</td>
+      <td class="pink">${arrFilteredStudents[i].porcentajeCompletado}</td>
+    </tr>`;
 
     container.innerHTML = result;
   }
