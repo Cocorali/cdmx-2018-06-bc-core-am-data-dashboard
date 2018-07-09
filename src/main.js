@@ -38,7 +38,7 @@ const filterStudentsStats = (array, gen, sede) => {
     }
   }
 
-  console.log(arrFilteredStudents);
+  //  console.log(arrFilteredStudents);
   for (i = 0; i < arrFilteredStudents.length; i++) {
     // result = "";
     result += `<div class="row">
@@ -61,20 +61,19 @@ const filterStudentsStats = (array, gen, sede) => {
 
     container.innerHTML = result;
   };
-
   return arrFilteredStudents;
 };
 
 
 getGeneracion = (data) => {
   const eventFunction = (event) => {
-  // Las let declaradas aquí no logran funcionar en nuestro doble for para filtrar...esto pasa por qué es let?
-    gen = event.target.dataset.gen;
+    // Las let declaradas aquí no logran funcionar en nuestro doble for para filtrar...esto pasa por qué es let?
+    let gen = event.target.dataset.gen;
     let sede = event.target.dataset.campus;
     console.log(sede, gen);
     // Asigna la función getStudents con parámetro data a una variable para usarla en Función de filtrado
     const arrDatosEstudiantes = computeStudentsStats(data);
-    // constante que tiene una función anónima, el callback para filter
+    // Constante que tiene una función anónima, el callback para filter
     filterStudentsStats(arrDatosEstudiantes, gen, sede);
   };
 

@@ -1,6 +1,4 @@
 // Esta hoja debe contener toda la funcionalidad que corresponda a obtener, procesar y manipular datos.
-
-
 const url = 'https://raw.githubusercontent.com/BeryNice/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json';
 window.onload = () => {
   fetch(url)
