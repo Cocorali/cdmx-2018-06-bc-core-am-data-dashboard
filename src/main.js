@@ -45,10 +45,12 @@ const filterStudentsStats = (array, gen, sede) =>{
       <td><a href="#">${arrFilteredStudents[i].name}</a> </td>
       <td>${arrFilteredStudents[i].correo}</td>
       <td>${arrFilteredStudents[i].turno}</td>
-      <td class="pink">${arrFilteredStudents[i].porcentajeCompletado}</td>
+      <td>${arrFilteredStudents[i].porcentajeCompletado}</td>
     </tr>`;
 
     container.innerHTML = result;
+    document.getElementById('generacion').innerHTML = 'Vista ' + gen + ' Generación' ;
+    document.getElementById('sede').innerHTML = 'Sede ' + sede;
   }
 
   return arrFilteredStudents;
