@@ -1,7 +1,4 @@
-// Aquí poner todo el código que tenga que ver con mostrar los datos en la pantalla
-
-// Variable que voy a usar para pintar data
-const container = document.getElementById('resultados');
+// Aquí poner todo el código que tenga que ver con mostrar los datos en la pantall// Variable que voy a usar para pintar data
 let result = '';
 
 // OBTENIENDO LAS SEDES
@@ -38,8 +35,27 @@ const filterStudentsStats = (array, gen, sede) =>{
     }
   }
   //  console.log(arrFilteredStudents);
+  result ='';
+  document.getElementById('student-list').innerText = result;
+  document.getElementById('student-list').innerHTML = `
+  <div class="table-responsive-sm margin-large-top">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">NOMBRE</th>
+          <th scope="col">EMAIL</th>
+          <th scope="col">TURNO</th>
+          <th scope="col">PORCENTAJE COMPLETADO</th>
+        </tr>
+      </thead>
+      <tbody id="resultados">
+
+      </tbody>
+    </table>`;
+    const container = document.getElementById('resultados');
+
   for (i = 0; i < arrFilteredStudents.length; i++) {
-    // result = "";
     result += ` <tr >
       <th scope="row"># </th>
       <td><a href="#">${arrFilteredStudents[i].name}</a> </td>
@@ -47,12 +63,8 @@ const filterStudentsStats = (array, gen, sede) =>{
       <td>${arrFilteredStudents[i].turno}</td>
       <td>${arrFilteredStudents[i].porcentajeCompletado}</td>
     </tr>`;
-
     container.innerHTML = result;
-    document.getElementById('generacion').innerHTML = 'Vista ' + gen + ' Generación' ;
-    document.getElementById('sede').innerHTML = 'Sede ' + sede;
   }
-
   return arrFilteredStudents;
 };
 
@@ -63,7 +75,8 @@ getGeneracion = (data) => {
     let gen = event.target.dataset.gen;
     let sede = event.target.dataset.campus;
     console.log(sede, gen);
-
+    document.getElementById('generacion').innerHTML = 'Vista ' + gen + ' Generación' ;
+    document.getElementById('sede').innerHTML = 'Sede ' + sede;
     // Asigna la función getStudents con parámetro data a una variable para usarla en Función de filtrado
     const arrDatosEstudiantes = computeStudentsStats(data);
     // Constante que tiene una función anónima, el callback para filter

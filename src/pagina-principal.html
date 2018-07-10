@@ -67,9 +67,6 @@
         <ul class="collapse list-unstyled" id="santiagoSubmenu">
           <li>
             <a href="#" class="btnGeneraciones" data-gen="tercera" data-campus="santiago">Generación 3</a>
-            <ul>
-              <li><a href="#">Reporte de Progreso</a></li>
-            </ul>
           </li>
           <li>
             <a href="#" class="btnGeneraciones" data-gen="cuarta" data-campus="santiago">Generación 4</a>
@@ -101,33 +98,13 @@
         </nav>
 
     <!-- Inicia impresión de contenido  -->
-    <div id="viewResults">
-      <h3 id="generacion"></h3>
-      <h4 id="sede"></h4>
-      <div class="container-fluid">
-
-        <div class="table-responsive-sm margin-large-top">
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">NOMBRE</th>
-                <th scope="col">EMAIL</th>
-                <th scope="col">TURNO</th>
-                <th scope="col">PORCENTAJE COMPLETADO</th>
-              </tr>
-            </thead>
-
-            <tbody id="resultados">
-
-            </tbody>
-          </table>
-        </div>
+    <div id="view-results" class="container-fluid view-results"><!-- contenedor principal -->
+      <!-- Contenedor que permite  -->
+        <h3 id="generacion"></h3>
+        <h4 id="sede"></h4>
+        <section id="student-list"></section>
+     </div>
    </div>
-
-
-
-
 <!-- /#content -->
 
 <!-- jQuery CDN - Slim version (=without AJAX) -->

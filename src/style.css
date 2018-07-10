@@ -233,7 +233,7 @@ CONTENT STYLE
 }
 
 /*#resultados*/
-#viewResults{
+.view-results{
   padding: 20px;
 }
 /* ---------------------------------------------------
@@ -354,7 +354,7 @@ MEDIAQUERIES
   }
 
   /*#resultados*/
-  #viewResults {
+  .view-results {
     padding: 15px;
     background-color: #f8f8f8;
   }
@@ -387,7 +387,7 @@ MEDIAQUERIES
   }
 
   /*#resultados*/
-  #viewResults {
+  .view-results {
     padding: 15px;
     background-color: #f8f8f8;
   }
@@ -423,7 +423,7 @@ MEDIAQUERIES
   }
 
   /*#resultados*/
-  #viewResults {
+  .view-results {
     padding: 15px;
     background-color: #f8f8f8;
   }
