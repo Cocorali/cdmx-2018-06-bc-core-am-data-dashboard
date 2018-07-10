@@ -10,6 +10,7 @@ getSedes = (data) => {
       const containerSedes = document.getElementById('resultados');
       /* paragraph.innerHTML = sedes;
            containerSedes.appendChild(p);*/
+      // Poner al inicio de la función donde va a cargar las listas    
       container.innerHTML = '';
     }
   });

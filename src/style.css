@@ -26,7 +26,6 @@ header {
   max-width:200px;
   margin: auto;
   display: block;
-  padding-bottom: 20px;
 }
 
 .close {
@@ -50,6 +49,12 @@ LOGIN
   padding: 8% 0 0;
   margin: auto;
 }
+.logo-welcome {
+  margin: auto;
+  display: block;
+  margin-bottom: 20px !important;
+}
+
 .form {
   position: relative;
   max-width: 360px;
