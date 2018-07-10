@@ -26,14 +26,8 @@ header {
   max-width:200px;
   margin: auto;
   display: block;
-  /*  padding-left: 20px;*/
+  padding-bottom: 20px;
 }
-
-/*.user {
-float: right;
-font-family: 'Roboto', sans-serif;
-font-size: 1em;
-}*/
 
 .close {
   float: right;
@@ -47,24 +41,32 @@ font-size: 1em;
 /* ---------------------------------------------------
 LOGIN
 ----------------------------------------------------- */
-
-.bg-amarillo{
-  background: #ffe521;
+.bg-amarillo {
+  background-color: #ffe521;
 }
 
-/* Centrado vertical login*/
-.flex-parent{
-  display: flex;
-  display: -ms-flex;
-  display: -webkit-flex;
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
 }
 
-.flex-child{
-  display: -ms-flex;
-  display: -webkit-flex;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+.form-control {
+  font-family: "Roboto", sans-serif;
+  outline: 0; 
+  width: 100%;
+  margin: 0 0 15px;
+  padding: 15px;
+  font-size: 14px;
+  border-bottom: 1px solid #000;
+  background-color: #ffe521;
 }
 
 p {
@@ -365,10 +367,7 @@ MEDIAQUERIES
     box-shadow: 1px 1px 8px #ccc;
     padding: 20px 5px;
   }
-/*  .border-right{
-    border-right: #fff 1px dashed;;
-  }
-*/
+
 
 }
 
@@ -403,10 +402,6 @@ MEDIAQUERIES
     box-shadow: 1px 1px 8px #ccc;
     padding: 20px 5px;
   }
-
-  /*.border-right{
-    border-right: #fff 1px dashed;;
-  }*/
 
 }
 
