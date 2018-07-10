@@ -1,70 +1,54 @@
-<!DOCTYPE html><html>
+<!DOCTYPE html>
+<html>
 
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <title>Bienvenida</title>
-      <link rel="stylesheet" href="style.css">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
-      <link rel=“icon” href=“images/favicon.ico”>
-    </head>
-  
-    <body>
-     <main>
-      <div class="p-3 mb-2 bg-warning text-dark, d-flex justify-content-center, row">
-          <img src="images/Laboratoria-Logo-RGB-blanco.png" alt="Laboratoria" class="logo">
-                <article class="card-body text-center">
-                 <form name=form action="pagina-principal.html">
-  
-                 <div class ="form-group" > 
-                <input class="form-control" type=email name=login placeholder="Nombre de usuarix"> 
-                </div>
-                 <div class ="form-group" > 
-                <input class="form-control" id="password" type=password name=password  placeholder="Tu contraseña"> 
-                </div>
-  
-  
-    <div class="row">
-            <div class="col-md-6">
-                <div class="form-group, d-flex flex-row-reverse">
-                    <input onclick=ingresar() id="trigger" type=button value=Ingresa class="btn btn-light btn-sm p-2">
-                </div> 
-            </div>                                     
-        </div>  
-    
-     
-  
-                <script>
-                var input = document.getElementById("password");
-                input.addEventListener("keyup", function (event){
-                  event.preventDefault();
-                  if (event.keyCode === 13) {
-                    document.getElementById("trigger").click();
-                  }
-                })
-              </script>
-          </form>
-        </article>  
-      </div>
-  </main>    
-  
-  
-      <script>
-        const ingresar = () => {
-          if (document.form.password.value == '12345' && document.form.login.value == 'LABORATORIAN') {
-            document.form.submit();
-          } else {
-            alert("Porfavor ingresa, nombre de usuarix y contraseña correctos.");
-          }
-        }
-      </script>
-  
-  
-  <div class="copyrights text-center">
-    <p> Desarrollado por Berenice Lemus y Copelia Altamirano. Laboratoria CDMX 2018 </p>
-  </div>   
-  
-    </body>
-  
-    </html>
-  
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Bienvenida</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel=“icon” href=“images/favicon.ico”>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-amarillo">
+  <main class="login-page">
+    <section class="form">
+
+      <p>BIENVENIDX A</p>
+      <form name=form action="pagina-principal.html" class="register-form">
+        <img src="images/Laboratoria-Logo-RGB-blanco.png" alt="Laboratoria" class="logo">
+        <input class="form-control" type=email name=login placeholder="Nombre de usuarix">
+        <input class="form-control" id="password" type=password name=password placeholder="Tu contraseña">
+        <input onclick=ingresar() id="trigger" type=button value=Ingresa class="btn btn-light btn-sm p-2">
+        <script>
+          var input = document.getElementById("password");
+          input.addEventListener("keyup", function (event) {
+            event.preventDefault();
+            if (event.keyCode === 13) {
+              document.getElementById("trigger").click();
+            }
+          })
+        </script>
+      </form>
+    </section>
+  </main>
+  <script>
+    const ingresar = () => {
+      if (document.form.password.value == '12345' && document.form.login.value == 'LABORATORIAN') {
+        document.form.submit();
+      } else {
+        alert("Porfavor ingresa, nombre de usuarix y contraseña correctos.");
+      }
+    }
+  </script>
+
+
+  <footer class="copyrights text-center">
+    <p> Desarrollado por Berenice Lemus y Copelia Altamirano  Laboratoria <i class="fas fa-heartbeat"></i> CDMX 2018 </p>
+  </footer>
+  </container>
+</body>
+
+</html>

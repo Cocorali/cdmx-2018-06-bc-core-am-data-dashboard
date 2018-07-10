@@ -49,6 +49,8 @@ const filterStudentsStats = (array, gen, sede) =>{
     </tr>`;
 
     container.innerHTML = result;
+    document.getElementById('generacion').innerHTML = 'Vista ' + gen + ' Generación' ;
+    document.getElementById('sede').innerHTML = 'Sede ' + sede;
   }
 
   return arrFilteredStudents;
