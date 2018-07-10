@@ -1,8 +1,9 @@
-@import "https://fonts.googleapis.com/css?family=Bitter:400,700|Open+Sans:300,400,600";
+@import url('https://fonts.googleapis.com/css?family=Bitter:400,400i,700|Open+Sans:300,400,600,700,800');
 
 body {
   margin: 0;
-  font-family: 'Open+Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  color:#333;
 }
 
 h1,
@@ -11,9 +12,9 @@ h3,
 h4,
 h5,
 h6{
- font-family: ‘Bitter’;
- color:#000;
- text-transform: uppercase;
+  font-family: 'Bitter', serif;
+  color:#000;
+  text-transform: uppercase;
 }
 
 header {
@@ -33,7 +34,7 @@ header {
 }
 
 .titles {
-  font-family: 'Bitter';
+  font-family: 'Bitter', serif;
   font-size: 1em;
 }
 
@@ -68,7 +69,6 @@ LOGIN
   background-color: #ffe521;
 }
 
-
 p {
   /*font-family: 'sans', sans-serif;*/
   font-size: 1em;
@@ -77,12 +77,18 @@ p {
   color: #333;
 }
 
+
 a,
-a:hover,
 a:focus {
-  color: inherit;
+  /*color: inherit;*/
+  color: #000;
+  font-weight: 600;
   text-decoration: none;
   transition: all 0.3s;
+}
+
+a:hover{
+  color: #2AC071;
 }
 
 .navbar {
@@ -310,20 +316,20 @@ ESTILOS POR VISTA
 
 /* textos y valores */
 .text-lead {
-  font-family: 'Bitter';
-  font-size: 1.3em;
+  font-family: 'Bitter', serif;
+  font-size: 1.2em;
   font-weight: 400;
 }
 
 .big-values{
-  font-family: 'Bitter';
-  font-size: 4em;
+  font-family: 'Bitter', serif;
+  font-size: 3.5em;
   font-weight: 400;
 }
 
 .values{
-  font-family: 'Bitter';
-  font-size: 2.8em;
+  font-family: 'Bitter', serif;
+  font-size: 2.5em;
   font-weight: 400;
 }
 
