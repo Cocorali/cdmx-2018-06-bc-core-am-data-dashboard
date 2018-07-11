@@ -2,131 +2,232 @@
 <html>
 
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Data Dashboard</title>
-<!-- gOOGLE fonts -->
-<!-- <link href="https://fonts.googleapis.com/css?family=Bitter:400,700|Open+Sans:300,400,600" rel="stylesheet"> -->
-<link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700|Open+Sans:300,400,600,700,800" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Data Dashboard</title>
+  <!-- gOOGLE fonts -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Bitter:400,700|Open+Sans:300,400,600" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700|Open+Sans:300,400,600,700,800" rel="stylesheet">
 
-<link rel="icon" href="images/favicon.ico">
-<!-- Bootstrap CSS CDN -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
-<!-- Our Custom CSS -->
-<link rel="stylesheet" href="style.css">
-<!-- Font Awesome JS -->
-<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+  <link rel="icon" href="images/favicon.ico">
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
+  <!-- Our Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome JS -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 </head>
 
 <body>
-<div class="wrapper">
-  <!-- Sidebar  -->
-  <nav id="sidebar">
-    <div class="sidebar-header">
-      <img src="images/Laboratoria-Logo-RGB.png" alt="Logo Laboratoria" class="logo">
-    </div>
+  <div class="wrapper">
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+      <div class="sidebar-header">
+        <img src="images/Laboratoria-Logo-RGB.png" alt="Logo Laboratoria" class="logo">
+      </div>
 
-    <ul class="list-unstyled components">
+      <ul class="list-unstyled components">
 
 
-      <li class="active">
-        <a id="sedesBtn" href="#">Página Principal</a>
-      </li>
-      <li>
-        <a href="#limaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Lima</a>
-        <ul class="collapse list-unstyled" id="limaSubmenu">
-          <li>
-            <a href="#" class="btnGeneraciones" data-gen="tercera" data-campus="lima">Generación 3</a>
-          </li>
-          <li>
-            <a href="#" class="btnGeneraciones" data-gen="cuarta" data-campus="lima">Generación 4</a>
-          </li>
-          <li>
-            <a href="#" class="btnGeneraciones" data-gen="quinta" data-campus="lima">Generación 5</a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="#mexicoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">México</a>
-        <ul class="collapse list-unstyled" id="mexicoSubmenu">
-          <li>
-            <a href="#" class="btnGeneraciones" data-gen="tercera" data-campus="mexico">Generación 3</a>
-          </li>
-          <li>
-            <a href="#" class="btnGeneraciones" data-gen="cuarta" data-campus="mexico">Generación 4</a>
-          </li>
-          <li>
-            <a href="#" class="btnGeneraciones" data-gen="quinta" data-campus="mexico">Generación 5</a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="#santiagoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Santiago</a>
-        <ul class="collapse list-unstyled" id="santiagoSubmenu">
-          <li>
-            <a href="#" class="btnGeneraciones" data-gen="tercera" data-campus="santiago">Generación 3</a>
-          </li>
-          <li>
-            <a href="#" class="btnGeneraciones" data-gen="cuarta" data-campus="santiago">Generación 4</a>
-          </li>
-          <li>
-            <a href="#" class="btnGeneraciones" data-gen="quinta" data-campus="santiago">Generación 5</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
+        <li class="active">
+          <a id="sedesBtn" href="#">Página Principal</a>
+        </li>
+        <li>
+          <a href="#limaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Lima</a>
+          <ul class="collapse list-unstyled" id="limaSubmenu">
+            <li>
+              <a href="#" class="btnGeneraciones" data-gen="tercera" data-campus="lima">Generación 3</a>
+            </li>
+            <li>
+              <a href="#" class="btnGeneraciones" data-gen="cuarta" data-campus="lima">Generación 4</a>
+            </li>
+            <li>
+              <a href="#" class="btnGeneraciones" data-gen="quinta" data-campus="lima">Generación 5</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#mexicoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">México</a>
+          <ul class="collapse list-unstyled" id="mexicoSubmenu">
+            <li>
+              <a href="#" class="btnGeneraciones" data-gen="tercera" data-campus="mexico">Generación 3</a>
+            </li>
+            <li>
+              <a href="#" class="btnGeneraciones" data-gen="cuarta" data-campus="mexico">Generación 4</a>
+            </li>
+            <li>
+              <a href="#" class="btnGeneraciones" data-gen="quinta" data-campus="mexico">Generación 5</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#santiagoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Santiago</a>
+          <ul class="collapse list-unstyled" id="santiagoSubmenu">
+            <li>
+              <a href="#" class="btnGeneraciones" data-gen="tercera" data-campus="santiago">Generación 3</a>
+            </li>
+            <li>
+              <a href="#" class="btnGeneraciones" data-gen="cuarta" data-campus="santiago">Generación 4</a>
+            </li>
+            <li>
+              <a href="#" class="btnGeneraciones" data-gen="quinta" data-campus="santiago">Generación 5</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
 
-  <!-- Page Content  -->
-  <div id="content">
-    <!-- Toogle MEnu  -->
-        <nav class="navbar">
-          <div class="container-fluid">
-            <button type="button" id="sidebarCollapse" class="btn">
-              <i class="fas fa-align-left"></i>
-            </button>
+    <!-- Page Content  -->
+    <div id="content">
+      <!-- Toogle MEnu  -->
+      <nav class="navbar">
+        <div class="container-fluid">
+          <button type="button" id="sidebarCollapse" class="btn">
+            <i class="fas fa-align-left"></i>
+          </button>
 
-            <div class="user">
-              <img src="images/default-user.png" alt="Logo Laboratoria" class="User">
-              <!--<i class="fas fa-user-circle"></i>-->
-              <a href="index.html"> <span> Usuarix  <i class="fas fa-caret-down"></i> </span></a>
+          <div class="user">
+            <img src="images/default-user.png" alt="Logo Laboratoria" class="User">
+            <!--<i class="fas fa-user-circle"></i>-->
+            <a href="index.html"> <span> Usuarix  <i class="fas fa-caret-down"></i> </span></a>
+          </div>
+
+        </div>
+      </nav>
+
+      <!-- Inicia impresión de contenido  -->
+      <div id="view-results" class="container-fluid view-results"><!-- contenedor principal -->
+        <!-- Contenedor que permite títulos y subtitulos generaciones -->
+        <section id="titulos">
+          <h3 id="generacion"></h3>
+          <h4 id="sede"></h4>
+        </section>
+
+        <!--<section id="general-view"> </section>-->
+        <section id="student-list">
+
+
+          <h3 id="title-h3" class="margin-large-bottom">VISTA GLOBAL LABORATORIA</h3>
+          <div class="container-fluid" >
+            <!-- Inicia primer fila datos globales egresadas-->
+            <div class="row margin-large shadow-row">
+              <div class="col-xl-4 col-sm-12 col-md-12">
+                <div class="text-lead"> Número total de estudiantes egresadas</div>
+                <div class="big-values margin-top">90 <i class="fas fa-user-graduate pink"></i></div>
+                <div>Estudiantes egresadas</div>
+              </div>
+              <div class="col-xl-8 col-sm-12 col-md-12">
+                <div class="text-lead"> ¿Cuántas estudiantes egresadas por sede?</div>
+                <div class="row">
+                  <div class="col-xl-4 col-sm-12 col-md-4 margin-top">
+                    <div class="text-lead"> LIMA</div>
+                    <div class="values margin-remove">30</div>
+                    <p>Estudiantes egresadas</p>
+                  </div>
+                  <div class="col-xl-4 col-sm-12 col-md-4 margin-top">
+                    <div class="text-lead"> MÉXICO</div>
+                    <div class="values margin-remove">30</div>
+                    <p>Estudiantes egresadas</p>
+                  </div>
+                  <div class="col-xl-4 col-sm-12 col-md-4 margin-top">
+                    <div class="text-lead"> SANTIAGO</div>
+                    <div class="values margin-remove">30</div>
+                    <p>Estudiantes egresadas</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
+            <!-- Inicia segunda fila datos globales estudiantes actuales-->
+            <div class="row margin-large shadow-row">
+              <div class="col-xl-4 col-sm-12 col-md-12">
+                <div class="text-lead"> Número total de estudiantes activas</div>
+                <div class="big-values margin-remove">45 <i class="fas fa-female pink"></i></div>
+                <p>Estudiantes cursando</p>
+              </div>
+              <div class="col-xl-8 col-sm-12 col-md-12">
+                <p class="text-lead"> ¿Cuántas estudiantes activas por sede?</p>
+                <div class="row">
+                  <div class="col-xl-4 col-sm-12 col-md-4 margin-top">
+                    <div class="text-lead"> LIMA</div>
+                    <div class="values margin-remove">15</div>
+                    <p>Estudiantes activas</p>
+                  </div>
+                  <div class="col-xl-4 col-sm-12 col-md-4 margin-top">
+                    <div class="text-lead"> MÉXICO</div>
+                    <div class="values margin-remove">15</div>
+                    <p>Estudiantes activas</p>
+                  </div>
+                  <div class="col-xl-4 col-sm-12 col-md-4 margin-top">
+                    <div class="text-lead"> SANTIAGO</div>
+                    <div class="values margin-remove">15</div>
+                    <p>Estudiantes activas</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Inicia tercer fila porcentaje global completitud LMS-->
+            <div class="row margin-large shadow-row">
+              <div class="col-xl-4 col-sm-12 col-md-12 border-right-xl">
+                <div class="text-lead"> Porcentaje Global de completitud del LMS</div>
+                <div class="big-values margin-remove pink">80% <i class="fas fa-chart-line"></i>
+
+                </div>
+                <p>Estudiantes cursando</p>
+              </div>
+              <div class="col-xl-8 col-sm-12 col-md-12">
+                <p class="text-lead"> Porcentaje de completitud del LMS por sede</p>
+                <div class="row">
+                  <div class="col-xl-4 col-sm-12 col-md-4 margin-top">
+                    <div class="text-lead"> LIMA</div>
+                    <div class="values margin-remove">70%</div>
+
+                  </div>
+                  <div class="col-xl-4 col-sm-12 col-md-4 margin-top">
+                    <div class="text-lead"> MÉXICO</div>
+                    <div class="values margin-remove">85%</div>
+
+                  </div>
+                  <div class="col-xl-4 col-sm-12 col-md-4 margin-top">
+                    <div class="text-lead"> SANTIAGO</div>
+                    <div class="values margin-remove">65%</div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
-        </nav>
 
-    <!-- Inicia impresión de contenido  -->
-    <div id="view-results" class="container-fluid view-results"><!-- contenedor principal -->
-      <!-- Contenedor que permite  -->
-        <h3 id="generacion"></h3>
-        <h4 id="sede"></h4>
-        <section id="student-list"></section>
-     </div>
-   </div>
-<!-- /#content -->
 
-<!-- jQuery CDN - Slim version (=without AJAX) -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-  crossorigin="anonymous"></script>
-<!-- Popper.JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
-  crossorigin="anonymous"></script>
-<!-- Bootstrap JS -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
-  crossorigin="anonymous"></script>
 
-<script type="text/javascript">
-  $(document).ready(function () {
-    $('#sidebarCollapse').on('click', function () {
-      $('#sidebar').toggleClass('active');
+        </section>
+      </div>
+    </div>
+    <!-- /#content -->
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+    crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+    crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function () {
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+      });
     });
-  });
-</script>
+  </script>
 
-<script src="main.js"></script>
-<script src="data.js"></script>
+  <script src="main.js"></script>
+  <script src="data.js"></script>
 
 </body>
 

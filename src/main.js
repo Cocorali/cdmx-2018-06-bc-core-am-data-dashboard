@@ -1,18 +1,105 @@
 // Aquí poner todo el código que tenga que ver con mostrar los datos en la pantall// Variable que voy a usar para pintar data
 let result = '';
 
-// OBTENIENDO LAS SEDES
-getSedes = (data) => {
+// IMPRIMIENDO VSTA GENERAL
+getSedes = (array, gen, sede) => {
   document.getElementById('sedesBtn').addEventListener('click', (event) => {
-    for (item in data) {
-      // const paragraph = document.createElement('p');
-      const sedes = item;
-      const containerSedes = document.getElementById('resultados');
-      /* paragraph.innerHTML = sedes;
-           containerSedes.appendChild(p);*/
-      // Poner al inicio de la función donde va a cargar las listas    
-      container.innerHTML = '';
-    }
+    const containerSedes = document.getElementById('student-list');
+    document.getElementById('titulos').style.display = 'none';
+    /* generacion.style.display = 'none';
+    campus.style.display = 'none';*/
+    containerSedes.innerHTML = `
+      <h3 id="title-h3" class="margin-large-bottom">VISTA GLOBAL LABORATORIA</h3>
+      <div class="container-fluid" >
+        <!-- Inicia primer fila datos globales egresadas-->
+        <div class="row margin-large shadow-row">
+          <div class="col-xl-4 col-sm-12 col-md-12">
+            <div class="text-lead"> Número total de estudiantes egresadas</div>
+            <div class="big-values margin-top">90 <i class="fas fa-user-graduate pink"></i></div>
+            <div>Estudiantes egresadas</div>
+          </div>
+          <div class="col-xl-8 col-sm-12 col-md-12">
+            <div class="text-lead"> ¿Cuántas estudiantes egresadas por sede?</div>
+            <div class="row">
+              <div class="col-xl-4 col-sm-12 col-md-4 margin-top">
+                <div class="text-lead"> LIMA</div>
+                <div class="values margin-remove">30</div>
+                <p>Estudiantes egresadas</p>
+              </div>
+              <div class="col-xl-4 col-sm-12 col-md-4 margin-top">
+                <div class="text-lead"> MÉXICO</div>
+                <div class="values margin-remove">30</div>
+                <p>Estudiantes egresadas</p>
+              </div>
+              <div class="col-xl-4 col-sm-12 col-md-4 margin-top">
+                <div class="text-lead"> SANTIAGO</div>
+                <div class="values margin-remove">30</div>
+                <p>Estudiantes egresadas</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Inicia segunda fila datos globales estudiantes actuales-->
+        <div class="row margin-large shadow-row">
+          <div class="col-xl-4 col-sm-12 col-md-12">
+            <div class="text-lead"> Número total de estudiantes activas</div>
+            <div class="big-values margin-remove">45 <i class="fas fa-female pink"></i></div>
+            <p>Estudiantes cursando</p>
+          </div>
+          <div class="col-xl-8 col-sm-12 col-md-12">
+            <p class="text-lead"> ¿Cuántas estudiantes activas por sede?</p>
+            <div class="row">
+              <div class="col-xl-4 col-sm-12 col-md-4 margin-top">
+                <div class="text-lead"> LIMA</div>
+                <div class="values margin-remove">15</div>
+                <p>Estudiantes activas</p>
+              </div>
+              <div class="col-xl-4 col-sm-12 col-md-4 margin-top">
+                <div class="text-lead"> MÉXICO</div>
+                <div class="values margin-remove">15</div>
+                <p>Estudiantes activas</p>
+              </div>
+              <div class="col-xl-4 col-sm-12 col-md-4 margin-top">
+                <div class="text-lead"> SANTIAGO</div>
+                <div class="values margin-remove">15</div>
+                <p>Estudiantes activas</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Inicia tercer fila porcentaje global completitud LMS-->
+        <div class="row margin-large shadow-row">
+          <div class="col-xl-4 col-sm-12 col-md-12 border-right-xl">
+            <div class="text-lead"> Porcentaje Global de completitud del LMS</div>
+            <div class="big-values margin-remove pink">80% <i class="fas fa-chart-line"></i>
+
+</div>
+            <p>Estudiantes cursando</p>
+          </div>
+          <div class="col-xl-8 col-sm-12 col-md-12">
+            <p class="text-lead"> Porcentaje de completitud del LMS por sede</p>
+            <div class="row">
+              <div class="col-xl-4 col-sm-12 col-md-4 margin-top">
+                <div class="text-lead"> LIMA</div>
+                <div class="values margin-remove">70%</div>
+
+              </div>
+              <div class="col-xl-4 col-sm-12 col-md-4 margin-top">
+                <div class="text-lead"> MÉXICO</div>
+                <div class="values margin-remove">85%</div>
+
+              </div>
+              <div class="col-xl-4 col-sm-12 col-md-4 margin-top">
+                <div class="text-lead"> SANTIAGO</div>
+                <div class="values margin-remove">65%</div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>`;
   });
 };
 
@@ -36,8 +123,9 @@ const filterStudentsStats = (array, gen, sede) =>{
     }
   }
   //  console.log(arrFilteredStudents);
-  result ='';
+  result = '';
   document.getElementById('student-list').innerText = result;
+  document.getElementById('titulos').style.display = 'block';
   document.getElementById('student-list').innerHTML = `
   <div class="table-responsive-sm margin-large-top">
     <table class="table table-striped">
@@ -54,7 +142,7 @@ const filterStudentsStats = (array, gen, sede) =>{
 
       </tbody>
     </table>`;
-    const container = document.getElementById('resultados');
+  const container = document.getElementById('resultados');
 
   for (i = 0; i < arrFilteredStudents.length; i++) {
     result += ` <tr >
