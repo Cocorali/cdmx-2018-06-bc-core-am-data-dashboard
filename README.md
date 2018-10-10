@@ -134,9 +134,9 @@ A continuación presentamos las referencias que nos permitieron realizar el skec
 
 #### Referencias Gráficas
 
-Google Analytics: ![Google Analytics](images/analytics.jpg)
-Smart Beemo: ![Google Analytics](images/smartbeemo.jpg)
-Bamboo HR: ![Google Analytics](images/bamboo.jpg)
+Google Analytics: ![Google Analytics](ux/images/analytics.jpg)
+Smart Beemo: ![Google Analytics](ux/images/smartbeemo.jpg)
+Bamboo HR: ![Google Analytics](ux/images/bamboo.jpg)
 
 El proceso de ideación comienza con la búsqueda de referencias gráficas de plataformas con datadashboard, para saber cuáles son los estándares de presentación de los elementos de información.
 
@@ -158,9 +158,9 @@ Un diseño limpio y sencillo, implementando los colores de Laboratoria que permi
 
 Enfocado principalmente  para las training manager, el datadashboard será una herramienta que les permita acceder tanto a la información general de Laboratoria como consulta rápida, como al avance en el LMS de cada estudiante en particular, permitiéndoles ver los puntos de mejora y facilitarles la toma de decisiones a través de la implementación de los colores institucionales para enfatizar información importante, haciendo una analogía a los colores del semáforo en el que el rosa fungirá como rojo (alerta) indicando los valores a los que se les deberá poner atención que estén por debajo del 60% de desempeño, verde a los que se encuentren por arriba del 90% y amarillo a los valores intermedios o porcentajes promedio.
 
-![Colores Laboratoria](images/colores-corporativos-laboratoria.png)
+![Colores Laboratoria](ux/images/colores-corporativos-laboratoria.png)
 
-![gráficos Laboratoria](images/corchetes-laboratoria.png)
+![gráficos Laboratoria](ux/images/corchetes-laboratoria.png)
 
 
 
@@ -168,13 +168,13 @@ Enfocado principalmente  para las training manager, el datadashboard será una h
  El tamaño de la fuente le suma valor a la jerarquía de los contenidos, así que una buena elección de este elemento resultó en un impacto positivo en el producto. Tomando como referencia plataformas del cliente, obtuvimos la tipografía ideal para transmitir un sello contemporáneo y legible.
 
 
-![Tipografía Laboratoria](images/tipografia-laboratoria.png)
+![Tipografía Laboratoria](ux/images/tipografia-laboratoria.png)
 
 
 
 ### **4. Prototipado**
 
-Sketch: ![Página Bienvenida](images/sketch.jpg)
+Sketch: ![Página Bienvenida](ux/images/sketch.jpg)
 
 Prototipo en figma:
 
